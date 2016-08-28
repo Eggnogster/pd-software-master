@@ -19,15 +19,15 @@ def home(request):
         }
     )
 
-def contact(request):
+def scheduling(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/contact.html',
+        'app/scheduling.html',
         {
-            'title':'Contact',
-            'message':'Your contact page.',
+            'title':'Scheduling',
+            'message':'Your scheduler.',
             'year':datetime.now().year,
         }
     )

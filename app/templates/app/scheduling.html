@@ -1,0 +1,113 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+				<!-- Page header -->
+				<div class="page-header page-header-default">
+					<div class="page-header-content">
+						<div class="page-title">
+							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Fullcalendar</span> - Basic Views</h4>
+						</div>
+
+						<div class="heading-elements">
+							<div class="heading-btn-group">
+								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
+								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
+								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Schedule</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="breadcrumb-line">
+						<ul class="breadcrumb">
+							<li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
+							<li><a href="extension_fullcalendar_views.html">Fullcalendar</a></li>
+							<li class="active">Basic views</li>
+						</ul>
+
+						<ul class="breadcrumb-elements">
+							<li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="icon-gear position-left"></i>
+									Settings
+									<span class="caret"></span>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+									<li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+									<li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /page header -->
+
+
+				<!-- Content area -->
+				<div class="content">
+
+					<!-- Basic view -->
+					<div class="panel panel-flat">
+						<div class="panel-heading">
+							<h5 class="panel-title">Basic view</h5>
+							<div class="heading-elements">
+								<ul class="icons-list">
+			                		<li><a data-action="collapse"></a></li>
+			                		<li><a data-action="reload"></a></li>
+			                		<li><a data-action="close"></a></li>
+			                	</ul>
+		                	</div>
+						</div>
+						
+						<div class="panel-body">
+							<p class="content-group">FullCalendar is a jQuery plugin that provides a full-sized, drag &amp; drop event calendar like the one below. It uses AJAX to fetch events on-the-fly and is easily configured to use your own feed format. It is visually customizable with a rich API. Example below demonstrates a default view of the calendar with a basic setup: draggable and editable events, and starting date.</p>
+
+							<div class="fullcalendar-basic"></div>
+						</div>
+					</div>
+					<!-- /basic view -->
+
+
+					<!-- Agenda view -->
+					<div class="panel panel-flat">
+						<div class="panel-heading">
+							<h5 class="panel-title">Agenda view</h5>
+							<div class="heading-elements">
+								<ul class="icons-list">
+			                		<li><a data-action="collapse"></a></li>
+			                		<li><a data-action="reload"></a></li>
+			                		<li><a data-action="close"></a></li>
+			                	</ul>
+		                	</div>
+						</div>
+						
+						<div class="panel-body">
+							<p class="content-group">FullCalendar has a number of different "views", or ways of displaying days and events. The following 5 views are all built in to FullCalendar: <code>month</code>, <code>basicWeek</code>, <code>basicDay</code>, <code>agendaWeek</code>, <code>agendaDay</code>. You can define header buttons to allow the user to switch between them. Also you can set the initial view of the calendar with the defaultView option. The following example demonstrates <code>agenda</code> views.</p>
+
+							<div class="fullcalendar-agenda"></div>
+						</div>
+					</div>
+					<!-- agenda view -->
+
+
+					<!-- Footer -->
+					<div class="footer text-muted">
+						&copy; 2015. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+					</div>
+					<!-- /footer -->
+
+				</div>
+				<!-- /content area -->
+
+			</div>
+			<!-- /main content -->
+
+{% endblock %}
