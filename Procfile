@@ -1,1 +1,1 @@
-web: gunicorn pd_software.wsgi
+web: gunicorn privateduty.wsgi
