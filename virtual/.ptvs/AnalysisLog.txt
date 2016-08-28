@@ -6167,3 +6167,47 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Micro
 2016-08-27T19:32:51: Saving group "C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\wheel"
 2016-08-27T19:32:51: End of group "C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\wheel"
 2016-08-27T19:32:51: Deleting 0 files
+
+2016-08-28T12:11:42: Start analysis
+2016-08-28T12:11:42: [WARNING] Library was set explicitly - skipping path detection
+2016-08-28T12:11:42: IncludeModulesFromModulePath = win32com
+2016-08-28T12:11:42: Deleting 0 files
+2016-08-28T12:11:42: astropy.CallDepth = 0
+2016-08-28T12:11:42: matplotlib.CallDepth = 3
+2016-08-28T12:11:42: pandas.CallDepth = 0
+2016-08-28T12:11:42: sympy.CallDepth = 0
+2016-08-28T12:11:42: Start group "C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise" with 14 files
+2016-08-28T12:11:44: Parsing "whitenoise.base" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\base.py")
+2016-08-28T12:11:44: Parsing "whitenoise.compress" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\compress.py")
+2016-08-28T12:11:44: Parsing "whitenoise.django" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\django.py")
+2016-08-28T12:11:44: Parsing "whitenoise.httpstatus_backport" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\httpstatus_backport.py")
+2016-08-28T12:11:44: Parsing "whitenoise.media_types" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\media_types.py")
+2016-08-28T12:11:44: Parsing "whitenoise.middleware" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\middleware.py")
+2016-08-28T12:11:44: Parsing "whitenoise.static_file" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\static_file.py")
+2016-08-28T12:11:44: Parsing "whitenoise.storage" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\storage.py")
+2016-08-28T12:11:44: Parsing "whitenoise.utils" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\utils.py")
+2016-08-28T12:11:44: Parsing "whitenoise" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\__init__.py")
+2016-08-28T12:11:44: Parsing "whitenoise.runserver_nostatic" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\runserver_nostatic\__init__.py")
+2016-08-28T12:11:44: Parsing "whitenoise.runserver_nostatic.management" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\runserver_nostatic\management\__init__.py")
+2016-08-28T12:11:44: Parsing "whitenoise.runserver_nostatic.management.commands.runserver" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\runserver_nostatic\management\commands\runserver.py")
+2016-08-28T12:11:44: Parsing "whitenoise.runserver_nostatic.management.commands" ("C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise\runserver_nostatic\management\commands\__init__.py")
+2016-08-28T12:11:44: Parsing complete
+2016-08-28T12:11:44: Analyzing "whitenoise.base"
+2016-08-28T12:11:44: Analyzing "whitenoise.compress"
+2016-08-28T12:11:44: Analyzing "whitenoise.django"
+2016-08-28T12:11:44: Analyzing "whitenoise.httpstatus_backport"
+2016-08-28T12:11:44: Analyzing "whitenoise.media_types"
+2016-08-28T12:11:44: Analyzing "whitenoise.middleware"
+2016-08-28T12:11:44: Analyzing "whitenoise.static_file"
+2016-08-28T12:11:44: Analyzing "whitenoise.storage"
+2016-08-28T12:11:44: Analyzing "whitenoise.utils"
+2016-08-28T12:11:44: Analyzing "whitenoise"
+2016-08-28T12:11:44: Analyzing "whitenoise.runserver_nostatic"
+2016-08-28T12:11:44: Analyzing "whitenoise.runserver_nostatic.management"
+2016-08-28T12:11:44: Analyzing "whitenoise.runserver_nostatic.management.commands.runserver"
+2016-08-28T12:11:44: Analyzing "whitenoise.runserver_nostatic.management.commands"
+2016-08-28T12:11:44: Starting analysis of 14 modules
+2016-08-28T12:11:44: Analysis complete
+2016-08-28T12:11:44: Saving group "C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise"
+2016-08-28T12:11:44: End of group "C:\Users\erikw\Documents\GitHub\pd-software-master\virtual\Lib\site-packages\whitenoise"
+2016-08-28T12:11:45: Deleting 0 files
