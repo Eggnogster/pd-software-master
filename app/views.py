@@ -19,6 +19,19 @@ def home(request):
         }
     )
 
+def clients(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/clients.html',
+        {
+            'title':'Clients',
+            'message':'Your clients.',
+            'year':datetime.now().year,
+        }
+    )
+
 def scheduling(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)

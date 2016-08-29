@@ -5443,7 +5443,7 @@ button.list-group-item-danger.active:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .panel-body {
-  padding: 20px;
+  padding: 0;
 }
 .panel-heading {
   padding: 15px 20px;
@@ -5643,7 +5643,6 @@ button.list-group-item-danger.active:focus {
   border-bottom: 0;
 }
 .panel > .table-responsive {
-  border: 0;
   margin-bottom: 0;
 }
 .panel-group {
