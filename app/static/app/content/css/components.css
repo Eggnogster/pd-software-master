@@ -335,7 +335,7 @@ a.badge,
 .navigation > li > a {
   padding: 12px 20px;
   min-height: 44px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .navigation > li.active > a,
 .navigation > li.active > a:hover,
