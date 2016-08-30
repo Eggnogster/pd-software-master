@@ -58,6 +58,45 @@ def scheduling(request):
         }
     )
 
+def accounting(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/accounting.html',
+        {
+            'title':'Accounting',
+            'message':'Your accounting.',
+            'year':datetime.now().year,
+        }
+    )
+
+def reports(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/reports.html',
+        {
+            'title':'Reports',
+            'message':'Your reports.',
+            'year':datetime.now().year,
+        }
+    )
+
+def manageoffice(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/manage-office.html',
+        {
+            'title':'Manage Office',
+            'message':'Your manage office.',
+            'year':datetime.now().year,
+        }
+    )
+
 def about(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
