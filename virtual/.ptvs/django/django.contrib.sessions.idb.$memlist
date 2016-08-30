@@ -1,9 +1,9 @@
-backends
+management
 exceptions
 apps
-management
-middleware
 migrations
+middleware
+backends
 serializers
 models
 base_session

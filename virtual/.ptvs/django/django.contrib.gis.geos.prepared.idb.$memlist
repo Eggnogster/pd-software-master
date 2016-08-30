@@ -1,5 +1,3 @@
-GEOSException
-geos_version_info
-GEOSBase
 capi
 PreparedGeometry
+GEOSBase

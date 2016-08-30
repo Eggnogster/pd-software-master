@@ -1,6 +1,7 @@
-checks
+AppConfig
 _
 SimpleAdminConfig
-AdminConfig
-AppConfig
 check_admin_app
+checks
+AdminConfig
+check_dependencies

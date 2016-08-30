@@ -7,8 +7,5 @@ import_module
 router
 BaseManager
 python_2_unicode_compatible
-SwappedManagerDescriptor
 ManagerDescriptor
 EmptyManager
-AbstractManagerDescriptor
-ensure_default_manager

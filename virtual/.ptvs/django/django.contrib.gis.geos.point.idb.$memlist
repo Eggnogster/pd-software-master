@@ -1,7 +1,9 @@
-six
 range
-Point
+six
+GEOSGeometry
+warnings
 capi
 GEOSException
-GEOSGeometry
+Point
+RemovedInDjango20Warning
 c_uint

@@ -1,7 +1,6 @@
-BaseCommand
-logging
 get_runner
-Command
-os
-sys
+BaseCommand
 settings
+Command
+sys
+os

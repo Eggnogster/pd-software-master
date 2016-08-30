@@ -1,12 +1,12 @@
 re_words
 unicode_literals
-allow_lazy
-unescape_string_literal
-html_entities
+_entity_re
+get_valid_filename
 re_tag
 ugettext_lazy
 _
 BytesIO
+keep_lazy
 compress_sequence
 re_camel_case
 pgettext
@@ -22,8 +22,9 @@ re
 _replace_entity
 phone2numeric
 smart_split
-_entity_re
-get_valid_filename
+unescape_string_literal
+html_entities
+keep_lazy_text
 slugify
 force_text
 GzipFile

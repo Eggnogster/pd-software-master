@@ -1,7 +1,6 @@
-static
-StaticFilesNode
-template
-staticfiles_storage
-StaticNode
 do_static
 register
+_do_static
+template
+static
+_static

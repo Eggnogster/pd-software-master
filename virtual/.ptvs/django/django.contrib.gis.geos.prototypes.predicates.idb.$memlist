@@ -1,9 +1,10 @@
 UnaryPredicate
 geos_crosses
 geos_within
+geos_relatepattern
 geos_contains
 geos_equals
-geos_intersects
+geos_covers
 GEOSFuncFactory
 check_predicate
 geos_touches
@@ -13,9 +14,10 @@ geos_isring
 geos_disjoint
 geos_hasz
 c_double
-geos_relatepattern
+geos_isclosed
 geos_issimple
 BinaryPredicate
+geos_intersects
 geos_isempty
 geos_isvalid
 GEOM_PTR

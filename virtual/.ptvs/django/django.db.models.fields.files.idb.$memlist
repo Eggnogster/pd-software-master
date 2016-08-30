@@ -1,7 +1,9 @@
 ImageFileDescriptor
+RemovedInDjango20Warning
 FieldFile
 _
 forms
+posixpath
 force_str
 os
 six
@@ -15,8 +17,6 @@ signals
 ImageField
 FileDescriptor
 warnings
-RemovedInDjango110Warning
 default_storage
 force_text
-func_supports_parameter
 ImageFile

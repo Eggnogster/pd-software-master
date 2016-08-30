@@ -8,9 +8,9 @@ _
 checkbox
 ObjectDoesNotExist
 AdminErrorList
+ugettext
 capfirst
 help_text_for_field
-static
 flatten_fieldsets
 label_for_field
 ManyToManyRel
@@ -31,7 +31,6 @@ forms
 RemovedInDjango20Warning
 Fieldset
 display_for_field
-RemovedInDjango110Warning
-cached_property
+json
 settings
 mark_safe

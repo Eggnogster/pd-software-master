@@ -4,6 +4,7 @@ default_app_config
 BACKEND_SESSION_KEY
 tokens
 update_session_auth_hash
+validators
 decorators
 models
 REDIRECT_FIELD_NAME
@@ -15,11 +16,11 @@ django_apps
 SESSION_KEY
 urls
 import_string
-backends
+user_logged_in
 signals
 password_validation
 _get_user_session_key
-admin
+rotate_token
 user_login_failed
 apps
 load_backend
@@ -41,10 +42,10 @@ ImproperlyConfigured
 get_user
 get_permission_codename
 checks
-user_logged_in
+backends
 context_processors
 _get_backends
-rotate_token
+admin
 constant_time_compare
 mixins
 settings

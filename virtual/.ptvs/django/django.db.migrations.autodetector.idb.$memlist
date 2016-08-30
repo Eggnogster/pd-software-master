@@ -1,10 +1,11 @@
 models
 unicode_literals
+get_migration_name_timestamp
 re
 RegexObject
 MigrationQuestioner
 six
-datetime
+AlterModelOptions
 MigrationOptimizer
 Migration
 COMPILED_REGEX_TYPE
@@ -13,5 +14,4 @@ stable_topological_sort
 chain
 operations
 functools
-AlterModelOptions
 settings

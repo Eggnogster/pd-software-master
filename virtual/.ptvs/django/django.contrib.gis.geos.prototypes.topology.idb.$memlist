@@ -8,7 +8,8 @@ geos_union
 geos_preservesimplify
 check_geom
 geos_difference
-geos_interpolate
+geos_interpolate_normalized
+geos_unary_union
 geos_intersection
 c_int
 geos_pointonsurface
@@ -22,7 +23,7 @@ geos_simplify
 GEOSFuncFactory
 GEOM_PTR
 check_minus_one
-geos_interpolate_normalized
+geos_interpolate
 geos_cascaded_union
 geos_symdifference
 check_string

@@ -1,3 +1,4 @@
+itertools
 static
 i18n
 get_token
@@ -7,7 +8,7 @@ debug
 smart_text
 request
 SimpleLazyObject
-lazy
 csrf
+lazy
 media
 settings

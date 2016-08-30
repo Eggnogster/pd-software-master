@@ -1,8 +1,11 @@
+CSRF_FAILURE_TEMPLATE_NAME
 Context
-csrf_failure
+Engine
+loader
 _
 HttpResponseForbidden
 CSRF_FAILURE_TEMPLATE
-Engine
+TemplateDoesNotExist
+csrf_failure
 get_docs_version
 settings

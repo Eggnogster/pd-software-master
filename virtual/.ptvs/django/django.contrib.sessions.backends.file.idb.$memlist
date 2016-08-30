@@ -14,3 +14,4 @@ force_text
 shutil
 SuspiciousOperation
 settings
+UpdateError

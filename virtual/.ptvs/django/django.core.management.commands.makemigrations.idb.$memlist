@@ -1,5 +1,5 @@
-sys
-takewhile
+connections
+zip
 apps
 iteritems
 ProjectState
@@ -8,10 +8,14 @@ MigrationWriter
 os
 CommandError
 MigrationQuestioner
+sys
 Migration
-zip
+RemovedInDjango20Warning
+takewhile
 Command
 MigrationAutodetector
+get_migration_name_timestamp
+warnings
 InteractiveMigrationQuestioner
 MigrationLoader
 NonInteractiveMigrationQuestioner

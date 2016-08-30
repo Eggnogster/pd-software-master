@@ -1,4 +1,4 @@
-connections
+sys
 naiveip_re
 unicode_literals
 autoreload
@@ -6,19 +6,14 @@ BaseCommand
 re
 os
 CommandError
-force_text
 six
-MigrationSchemaMissing
-DEFAULT_DB_ALIAS
 datetime
-sys
-ImproperlyConfigured
+settings
 get_system_encoding
 errno
 Command
 get_internal_wsgi_application
-MigrationExecutor
+force_text
 run
 socket
 BaseRunserverCommand
-settings

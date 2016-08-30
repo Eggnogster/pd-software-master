@@ -3,13 +3,11 @@ Counter
 os
 get_app_template_dirs
 upath
-lru_cache
-warnings
+settings
 EngineHandler
 cached_property
-RemovedInDjango110Warning
 apps
 InvalidTemplateEngineError
 OrderedDict
+lru_cache
 ImproperlyConfigured
-settings

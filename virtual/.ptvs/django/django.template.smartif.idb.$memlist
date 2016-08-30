@@ -2,10 +2,8 @@ OPERATORS
 EndToken
 infix
 op
-warnings
 prefix
 TokenBase
-RemovedInDjango110Warning
 key
 Literal
 IfParser

@@ -1,5 +1,5 @@
 TemplateCommand
-get_random_string
-import_module
 Command
+import_module
+get_random_secret_key
 CommandError

@@ -12,7 +12,7 @@ MD5PasswordHasher
 importlib
 UnsaltedMD5PasswordHasher
 UNUSABLE_PASSWORD_PREFIX
-SHA1PasswordHasher
+Argon2PasswordHasher
 receiver
 ImproperlyConfigured
 import_string
@@ -30,6 +30,7 @@ BCryptPasswordHasher
 make_password
 get_hashers_by_algorithm
 BasePasswordHasher
+SHA1PasswordHasher
 PBKDF2PasswordHasher
 get_hasher
 pbkdf2

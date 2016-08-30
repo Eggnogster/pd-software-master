@@ -1,3 +1,4 @@
 checks
 DatabaseValidation
 BaseDatabaseValidation
+get_docs_version

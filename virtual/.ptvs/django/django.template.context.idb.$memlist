@@ -3,11 +3,10 @@ copy
 ContextDict
 contextmanager
 ContextPopException
-warnings
+RemovedInDjango20Warning
 make_context
 Context
-RemovedInDjango110Warning
 BaseContext
 RenderContext
 _builtin_context_processors
-_current_app_undefined
+warnings

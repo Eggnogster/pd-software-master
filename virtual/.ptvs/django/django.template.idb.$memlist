@@ -10,7 +10,7 @@ defaulttags
 response
 Library
 loaders
-resolve_variable
+backends
 Variable
 engine
 RequestContext
@@ -25,7 +25,6 @@ Context
 defaultfilters
 Node
 context_processors
-backends
 loader_tags
 context
 StringOrigin

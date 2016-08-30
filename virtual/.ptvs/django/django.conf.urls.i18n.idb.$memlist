@@ -1,10 +1,9 @@
 LocaleRegexURLResolver
-six
 set_language
-urlpatterns
-warnings
-patterns
-url
-RemovedInDjango110Warning
+is_language_prefix_patterns_used
 i18n_patterns
+get_resolver
+url
+urlpatterns
+lru_cache
 settings

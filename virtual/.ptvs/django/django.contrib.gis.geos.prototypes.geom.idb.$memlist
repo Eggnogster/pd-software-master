@@ -1,6 +1,6 @@
 get_geomn
 check_minus_one
-geos_get_srid
+create_empty_polygon
 get_num_coords
 create_linearring
 BinOutput
@@ -25,6 +25,7 @@ geos_type
 GeomOutput
 to_wkt
 create_collection
+geos_get_srid
 GEOSFuncFactory
 geos_normalize
 c_uchar_p

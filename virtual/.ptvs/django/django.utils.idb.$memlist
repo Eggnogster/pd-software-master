@@ -18,7 +18,6 @@ deprecation
 six
 functional
 module_loading
-checksums
 regex_helper
 formats
 cache

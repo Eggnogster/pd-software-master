@@ -3,9 +3,9 @@ apps
 feeds
 forms
 views
+geometry
 serializers
 geoip
-geometry
 default_app_config
 shortcuts
 db

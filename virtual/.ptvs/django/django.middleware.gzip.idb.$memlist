@@ -1,6 +1,7 @@
-compress_sequence
 compress_string
 patch_vary_headers
-re
 GZipMiddleware
+MiddlewareMixin
+compress_sequence
+re
 re_accepts_gzip

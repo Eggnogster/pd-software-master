@@ -1,6 +1,7 @@
-MessageDecoder
+six
 SessionStorage
 json
-BaseStorage
-six
+MessageDecoder
 MessageEncoder
+BaseStorage
+settings
