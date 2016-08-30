@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
+{% block doctype %}<!DOCTYPE html>{% endblock %}
 <html lang="en">
+{% block head %}
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>{{ title }} - My Django Application</title>
     {% load static from staticfiles %}
 	<!-- Global stylesheets -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' %}">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="{% static 'app/content/css/icons/icomoon/styles.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'app/content/css/bootstrap.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'app/content/css/core.css' %}">
@@ -32,10 +33,11 @@
 	<script type="text/javascript" src="{% static 'app/scripts/js/plugins/pickers/daterangepicker.js' %}"></script>
 
 	<script type="text/javascript" src="{% static 'app/scripts/js/core/app.js' %}"></script>
-	<script type="text/javascript" src="{% static 'app/scripts/js/pages/dashboard.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app/scripts/js/pages/dashboard.js' %}"></script>
     <!-- /theme JS files -->
 
 </head>
+{% endblock %}
 
 <body>
 	<!-- Main navbar -->
@@ -278,7 +280,7 @@
 								<!-- Main -->
 								<li class="bg-info-400 active"><a href="{% url 'home' %}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
 								<li><a href="{% url 'clients' %}"><i class="icon-users"></i> <span>Clients</span></a></li>
-                                <li><a href="../../RTL/index.html"><i class="icon-address-book"></i> <span>Caregivers</span></a></li>
+                                <li><a href="{% url 'caregivers' %}"><i class="icon-address-book"></i> <span>Caregivers</span></a></li>
                                 <li><a href="{% url 'scheduling' %}"><i class="icon-calendar2"></i> <span>Scheduling</span></a></li>
                                 <li><a href="../../RTL/index.html"><i class="icon-coin-dollar"></i> <span>Accounting</span></a></li>
                                 <li><a href="../../RTL/index.html"><i class="icon-file-stats"></i> <span>Reports</span></a></li>
@@ -303,7 +305,6 @@
 			<!-- /footer -->
         </div>
     </div>
-{% block scripts %}{% endblock %}
 
 </body>
 </html>

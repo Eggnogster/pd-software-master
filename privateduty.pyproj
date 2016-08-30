@@ -54,6 +54,7 @@
     <Folder Include="privateduty\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\scheduling.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
