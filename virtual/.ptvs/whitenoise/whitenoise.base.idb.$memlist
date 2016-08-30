@@ -5,7 +5,6 @@ os
 normpath
 MediaTypes
 StaticFile
-decode_path_info
 FileWrapper
 Headers
 WhiteNoise

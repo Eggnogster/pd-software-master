@@ -1,10 +1,8 @@
 stat_regular_file
 os
-IsDirectoryError
+unicode_literals
 MissingFileError
-decode_path_info
 stat
 ensure_leading_trailing_slash
 NotARegularFileError
 errno
-sys

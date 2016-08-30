@@ -1,5 +1,4 @@
 urlparse
-__all__
 os
 absolute_import
 DjangoWhiteNoise
@@ -7,7 +6,7 @@ staticfiles_storage
 settings
 GzipManifestStaticFilesStorage
 ensure_leading_trailing_slash
-IsDirectoryError
+__all__
 WhiteNoise
 ImproperlyConfigured
 finders
