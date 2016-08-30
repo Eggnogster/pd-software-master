@@ -1,7 +1,10 @@
 {% extends "app/layout.html" %}
 {% block nav-home %}class="active"{% endblock %}
+{% load static from staticfiles %}
+{% block script %}
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/dashboard.js' %}"></script>
+{% endblock %}
 {% block content %}
-
 <!-- Main content -->
 			<div class="content-wrapper">
 

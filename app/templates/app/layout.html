@@ -31,11 +31,12 @@
 	<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/bootstrap_multiselect.js' %}"></script>
 	<script type="text/javascript" src="{% static 'app/scripts/js/plugins/ui/moment/moment.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'app/scripts/js/plugins/pickers/daterangepicker.js' %}"></script>
-
 	<script type="text/javascript" src="{% static 'app/scripts/js/core/app.js' %}"></script>
-    <script type="text/javascript" src="{% static 'app/scripts/js/pages/dashboard.js' %}"></script>
     <!-- /theme JS files -->
-
+    <!-- Page Specific JS files -->
+    {% block script %}
+    {% endblock %}
+    <!-- /Page Specific JS files -->
 </head>
 {% endblock %}
 

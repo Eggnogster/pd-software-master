@@ -1,5 +1,14 @@
 {% extends "app/layout.html" %}
 {% block nav-reports %}class="active"{% endblock %}
+{% load static from staticfiles %}
+{% block script %}
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/echarts.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/charts/echarts/funnels_chords.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/theme/limitless.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/chart/funnel.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/chart/pie.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/chart/chord.js' %}"></script>
+{% endblock %}
 {% block content %}
 			<!-- Main content -->
 			<div class="content-wrapper">
@@ -8,7 +17,7 @@
 				<div class="page-header page-header-default">
 					<div class="page-header-content">
 						<div class="page-title">
-							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">ECharts</span> - Funnels &amp; Chords</h4>
+							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Reports</span></h4>
 						</div>
 
 						<div class="heading-elements">
@@ -19,46 +28,12 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="breadcrumb-line">
-						<ul class="breadcrumb">
-							<li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
-							<li><a href="echarts_funnels_chords.html">ECharts</a></li>
-							<li class="active">Funnels &amp; chords</li>
-						</ul>
-
-						<ul class="breadcrumb-elements">
-							<li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									<i class="icon-gear position-left"></i>
-									Settings
-									<span class="caret"></span>
-								</a>
-
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
-									<li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
-									<li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
-									<li class="divider"></li>
-									<li><a href="#"><i class="icon-gear"></i> All settings</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</div>
 				<!-- /page header -->
 
 
 				<!-- Content area -->
 				<div class="content">
-
-					<!-- Funnel charts title -->
-					<h6 class="content-group text-semibold">
-						Funnel charts
-						<small class="display-block">Basic examples of <code>funnel</code> chart type</small>
-					</h6>
-					<!-- /funnel charts title -->
 
 					<!-- Funnel charts -->
 					<div class="row">
