@@ -1717,14 +1717,14 @@ input[class*=bg-] + .form-control-feedback {
 .btn-info:focus,
 .btn-info.focus,
 .btn-info:hover {
-  background-color: #00BCD4;
-  border-color: #00BCD4;
+  background-color: #26C6DA;
+  border-color: #26C6DA;
 }
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
-  background-color: #00BCD4;
-  border-color: #00BCD4;
+  background-color: #26C6DA;
+  border-color: #26C6DA;
 }
 .btn-info:active:hover,
 .btn-info.active:hover,
@@ -1735,8 +1735,8 @@ input[class*=bg-] + .form-control-feedback {
 .btn-info:active.focus,
 .btn-info.active.focus,
 .open > .dropdown-toggle.btn-info.focus {
-  background-color: #00BCD4;
-  border-color: #00BCD4;
+  background-color: #26C6DA;
+  border-color: #26C6DA;
 }
 .btn-info.disabled {
   -webkit-box-shadow: none;
@@ -4887,6 +4887,7 @@ ul.dropdown-menu .dropdown-content-heading:first-child {
   background-color: transparent;
   border-width: 2px;
   border-radius: 0;
+  color:#333333;
   padding: 1px 4px 0 4px;
 }
 .label-flat[href]:hover,

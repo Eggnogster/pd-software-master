@@ -19592,3 +19592,21 @@ label.display-block {
   float: right;
   display: block;
 }
+/*Added by Erik*/
+.heading-elements-search {
+  background-color: inherit;
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  height: 36px;
+  margin-top: -18px;
+}
+.heading-elements-filters {
+  background-color: inherit;
+  position: absolute;
+  top: 50%;
+  right: 444px;
+  height: 36px;
+  margin-top: -18px;
+}
+

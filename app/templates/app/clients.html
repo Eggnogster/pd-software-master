@@ -1,11 +1,17 @@
 {% extends "app/layout.html" %}
 {% block nav-clients %}class="active"{% endblock %}
+{% load static from staticfiles %}
+{% block script %}
+<script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jquery_ui/core.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/selectboxit.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/form_selectbox.js' %}"></script>
+{% endblock %}
 {% block content %}
 			<!-- Main content -->
 			<div class="content-wrapper">
 
 				<!-- Page header -->
-				<div class="page-header page-header-default">
+				<div class="page-header">
 					<div class="page-header-content">
 						<div class="page-title">
 							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Clients</span></h4>
@@ -13,9 +19,7 @@
 
 						<div class="heading-elements">
 							<div class="heading-btn-group">
-								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
-								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
-								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Schedule</span></a>
+
 							</div>
 						</div>
 					</div>
@@ -29,51 +33,116 @@
 					<!-- Basic table -->
 					<div class="panel panel-flat">
 						<div class="panel-heading">
-							<h5 class="panel-title">Clients</h5>
-							<div class="heading-elements">
-								<ul class="icons-list">
-			                		<li><a data-action="collapse"></a></li>
-			                		<li><a data-action="reload"></a></li>
-			                		<li><a data-action="close"></a></li>
-			                	</ul>
-		                	</div>
-						</div>
+							<h5 class="panel-title">Client List</h5>
+                           
+                            <div class="heading-elements-filters">
+                                <form action="#" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="control-label col-lg-2 text-right">Label</label>
+                                        <div class="col-lg-8">
+                                            <select class="selectbox" style="display: none;">
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
+                                            </select>
+                                        </div>
+                                        </div>
+
+                                </form>
+                            </div>
+                                <div class="heading-elements-search">
+                                    <form action="#" class="main-search">
+                                        <div class="input-group content-group">
+                                            <div class="has-feedback has-feedback-left">
+                                                <input type="text" class="form-control" placeholder="Search">
+                                                <div class="form-control-feedback">
+                                                    <i class="icon-search4 text-muted text-size-base"></i>
+                                                </div>
+                                            </div>
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-info">Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="heading-elements">
+                                    <button type="button" class="btn btn-info"><i class="icon-add position-left"></i> Add Client</button>
+                                </div>
+                            </div>
                             <div class="panel-body">
                             </div>
 						<div class="table-responsive">
-							<table class="table table-bordered table-striped table-hover">
+							<table class="table table-sm table-bordered table-striped table-hover">
 								<thead>
                                     <tr class="border-solid">
-                                        <th>#</th>
-                                        <th>First Name</th>
                                         <th>Last Name</th>
-                                        <th>Username</th>
+                                        <th>First Name</th>
+                                        <th>DOB</th>
+                                        <th>Sex</th>
+                                        <th style="width:140px;">Status</th>
+                                        <th style="width:100px;">Type</th>
+                                        <th style="width:100px;">Actions</th>
                                     </tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>1</td>
+                                        <td>Kopyov</td>
 										<td>Eugene</td>
-										<td>Kopyov</td>
-										<td>@Kopyov</td>
+										<td>5/17/1990</td>
+										<td>M</td>
+                                        <td>Deceased</td>
+                                        <td><span class="label label-primary label-striped">Client</span></td>
+                                        <td><ul class="icons-list">
+                                            <li><a href="#"><i class="icon-pencil7"></i></a></li>
+                                            <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
+                                            </ul>
+                                        </td>
 									</tr>
 									<tr>
-										<td>2</td>
-										<td>Victoria</td>
-										<td>Baker</td>
-										<td>@Vicky</td>
+                                        <td>Kopyov</td>
+                                        <td>Eugene</td>
+                                        <td>5/17/1990</td>
+                                        <td>M</td>
+                                        <td>Active</td>
+                                        <td><span class="label label-warning label-striped">Lead</span></td>
+                                        <td>
+                                            <ul class="icons-list">
+                                                <li><a href="#"><i class="icon-pencil7"></i></a></li>
+                                                <li><a href="#"><i class="icon-sync"></i></a></li>
+                                                <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
+                                            </ul>
+                                        </td>
 									</tr>
 									<tr>
-										<td>3</td>
-										<td>James</td>
-										<td>Alexander</td>
-										<td>@Alex</td>
+                                        <td>Kopyov</td>
+                                        <td>Eugene</td>
+                                        <td>5/17/1990</td>
+                                        <td>M</td>
+                                        <td>Inactive</td>
+                                        <td><span class="label label-warning label-striped">Lead</span></td>
+                                        <td>
+                                            <ul class="icons-list">
+                                                <li><a href="#"><i class="icon-pencil7"></i></a></li>
+                                                <li><a href="#"><i class="icon-sync"></i></a></li>
+                                                <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
+                                            </ul>
+                                        </td>
 									</tr>
 									<tr>
-										<td>4</td>
-										<td>Franklin</td>
-										<td>Morrison</td>
-										<td>@Frank</td>
+                                        <td>Kopyov</td>
+                                        <td>Eugene</td>
+                                        <td>5/17/1990</td>
+                                        <td>M</td>
+                                        <td>Active</td>
+                                        <td><span class="label label-primary label-striped">Client</span></td>
+                                        <td>
+                                            <ul class="icons-list">
+                                                <li><a href="#"><i class="icon-pencil7"></i></a></li>
+                                                <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
+                                            </ul>
+                                        </td>
 									</tr>
 								</tbody>
 							</table>
