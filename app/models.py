@@ -219,7 +219,7 @@ class Caregiver(models.Model):
     hire_date = models.DateField(null=True)
     termination_date = models.DateField(null=True)
     supervisor_user = models.ForeignKey(User, null=True)
-    referral_compan = models.ForeignKey(ReferralCompany, null=True)
+    referral_company = models.ForeignKey(ReferralCompany, null=True)
     referral_contact = models.ForeignKey(ReferralContact, null=True)
     staff_status = models.ForeignKey(ListStaffStatus, null=True)
     status_date = models.DateField(null=True)
