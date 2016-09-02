@@ -2,3 +2,4 @@ venv
 *.pyc
 staticfiles
 web.debug.config
+pk.ppk
