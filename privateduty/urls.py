@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^reports', app.views.reports, name='reports'),
     url(r'^manage-office', app.views.manageoffice, name='manage-office'),
     url(r'^about', app.views.about, name='about'),
+    url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
