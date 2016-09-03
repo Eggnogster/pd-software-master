@@ -3,3 +3,4 @@ venv
 staticfiles
 web.debug.config
 pk.ppk
+virtual
