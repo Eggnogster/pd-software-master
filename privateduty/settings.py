@@ -35,13 +35,14 @@ INSTALLED_APPS = [
     'app',
     # Add your apps here to enable them
     'django.contrib.admin',
+    'registration',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registration'
+    
 ]
 
 MIDDLEWARE_CLASSES = [
