@@ -1074,8 +1074,8 @@ textarea {
 }
 .radio,
 .checkbox {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .radio label,
 .checkbox label {

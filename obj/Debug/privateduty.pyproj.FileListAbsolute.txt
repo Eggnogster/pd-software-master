@@ -9,7 +9,5 @@ C:\Users\erikw\Documents\GitHub\pd-software-master\bin\AzureSetup.cfg
 C:\Users\erikw\Documents\GitHub\pd-software-master\bin\Microsoft.PythonTools.AzureSetup.exe
 C:\Users\erikw\Documents\GitHub\pd-software-master\bin\Microsoft.PythonTools.AzureSetup.exe.config
 C:\Users\erikw\Documents\GitHub\pd-software-master\bin\wfastcgi.py
-C:\Users\erikw\Documents\GitHub\pd-software-master\obj\Debug\deployment-updated-orig-prefix.txt
-C:\Users\erikw\Documents\GitHub\pd-software-master\ptvs_virtualenv_proxy.py
 C:\Users\erikw\Documents\GitHub\pd-software-master\obj\Debug\web.config
 C:\Users\erikw\Documents\GitHub\pd-software-master\obj\Debug\web.debug.config

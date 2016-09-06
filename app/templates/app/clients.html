@@ -4,7 +4,9 @@
 {% block script %}
 <script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jquery_ui/core.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/selectboxit.min.js' %}"></script>
-
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/wizard_steps.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switchery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switch.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/notifications/bootbox.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/notifications/sweet_alert.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/select2.min.js' %}"></script>
@@ -14,10 +16,8 @@
 <script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jasny_bootstrap.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/validation/validate.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/extensions/cookie.js' %}"></script>
-<script type="text/javascript" src="{% static 'app/scripts/js/pages/wizard_steps.js' %}"></script>
-<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switchery.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switch.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/pages/form_checkboxes_radios.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/form_selectbox.js' %}"></script>
 {% endblock %}
 {% block content %}
 			<!-- Main content -->
@@ -51,18 +51,14 @@
                             <div class="heading-elements-filters">
                                 <form action="#" class="form-horizontal">
                                     <div class="form-group">
-                                        <label class="control-label col-lg-2 text-right">Label</label>
-                                        <div class="col-lg-8">
-                                            <select class="selectbox" style="display: none;">
-                                                <option value="AK">Alaska</option>
-                                                <option value="HI">Hawaii</option>
-                                                <option value="CA">California</option>
-                                                <option value="NV">Nevada</option>
-                                                <option value="OR">Oregon</option>
-                                            </select>
-                                        </div>
-                                        </div>
-
+                                        <label>Default select</label>
+                                        <select class="selectbox-bootstrap btn-default">
+                                            <option value="AK">Alaska</option>
+                                            <option value="HI">Hawaii</option>
+                                            <option value="CA">California</option>
+                                            <option value="NV">Nevada</option>
+                                        </select>
+                                    </div>   
                                 </form>
                             </div>
                                 <div class="heading-elements-search">
@@ -170,7 +166,7 @@
                                 <!-- Wizard with validation -->
                                 <div class="panel panel-white">
                                     <div class="panel-heading">
-                                        <h6 class="panel-title">Wizard with validation</h6>
+                                        <h6 class="panel-title">Add Client</h6>
                                         <div class="heading-elements">
                                             <ul class="icons-list">
                                                 <li><a data-action="collapse"></a></li>
@@ -195,16 +191,25 @@
                                                         <input type="text" name="name" class="form-control required" placeholder="Doe">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-1">
                                                     <div class="form-group">
                                                         <label>Lead?</label>
-                                                        <div class="checkbox checkbox-switchery">
+                                                        <div class="checkbox checkbox-switch">
                                                             <label>
-                                                                <input type="checkbox" class="switchery-info" checked="checked">
-                                                                Switch in <span class="text-semibold">info</span> context
+                                                                <input type="checkbox" data-on-text="Yes" data-off-text="No" data-on-color="info" class="switch" checked="checked">
                                                             </label>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                        <label>Sex</label>
+                                                        <div class="form-group">
+                                                            <select class="selectbox-bootstrap btn-default">
+                                                                <option value="M">Male</option>
+                                                                <option value="F">Female</option>
+                                                                <option value="O">Other</option>
+                                                            </select>
+                                                        </div>                                        
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label>Date of birth:</label>
@@ -266,65 +271,110 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label>Language</label>
                                                     <div class="form-group">
-                                                        <label>Select position: <span class="text-danger">*</span></label>
-                                                        <select name="position" data-placeholder="Select position" class="select required">
-                                                            <option></option>
-                                                            <optgroup label="Developer Relations">
-                                                                <option value="1">Sales Engineer</option>
-                                                                <option value="2">Ads Solutions Consultant</option>
-                                                                <option value="3">Technical Solutions Consultant</option>
-                                                                <option value="4">Business Intern</option>
-                                                            </optgroup>
-                                                            <optgroup label="Engineering &amp; Design">
-                                                                <option value="5">Interaction Designer</option>
-                                                                <option value="6">Technical Program Manager</option>
-                                                                <option value="7">Software Engineer</option>
-                                                                <option value="8">Information Security Engineer</option>
-                                                            </optgroup>
-                                                            <optgroup label="Marketing &amp; Communications">
-                                                                <option value="13">Media Outreach Manager</option>
-                                                                <option value="14">Research Manager</option>
-                                                                <option value="15">Marketing Intern</option>
-                                                                <option value="16">Business Intern</option>
-                                                            </optgroup>
-                                                            <optgroup label="Sales Operations">
-                                                                <option value="17">Sales Operations Analyst</option>
-                                                                <option value="18">Technology Product Manager</option>
-                                                                <option value="19">Product Expert</option>
-                                                                <option value="20">Sales Insights Analyst</option>
-                                                                <option value="21">Customer Operations Analyst</option>
-                                                            </optgroup>
+                                                        <select class="selectbox-bootstrap btn-default">
+                                                            <option value="English">English</option>
+                                                            <option value="Russian">Russian</option>
+                                                            <option value="O">Other</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>Marital Status</label>
+                                                    <div class="form-group">
+                                                        <select class="selectbox-bootstrap btn-default">
+                                                            <option value="Married">Married</option>
+                                                            <option value="Single">Single</option>
+                                                            <option value="O">Other</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>SSN:</label>
+                                                        <input type="text" name="tel" class="form-control" placeholder="123-45-6789">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>Veteran?</label>
+                                                    <div class="form-group">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="radio-inline-left" class="styled" checked="checked">
+                                                            Yes
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="radio-inline-left" class="styled">
+                                                            No
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="radio-inline-left" class="styled">
+                                                            Spouse
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>Address 1</label>
+                                                        <input type="text" name="tel" class="form-control" placeholder="1234 Happy St">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>Address 2</label>
+                                                        <input type="text" name="tel" class="form-control" placeholder="Apt 123">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>City</label>
+                                                        <input type="text" name="tel" class="form-control" placeholder="Austin">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>State</label>
+                                                    <div class="form-group">
+                                                        <select class="selectbox-bootstrap btn-default">
+                                                            <option value="TX">TX</option>
+                                                            <option value="CA">CA</option>
+                                                            <option value="VA">VA</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label>Applicant name: <span class="text-danger">*</span></label>
-                                                        <input type="text" name="name" class="form-control required" placeholder="John Doe">
+                                                        <label>Postal Code</label>
+                                                        <input type="text" name="tel" class="form-control" placeholder="12345">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label>Email address: <span class="text-danger">*</span></label>
-                                                        <input type="email" name="email" class="form-control required" placeholder="your@email.com">
+                                                        <label>Phone</label>
+                                                        <input type="text" name="tel" class="form-control" placeholder="123-456-7890">
                                                     </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>Other Phone</label>
+                                                        <input type="text" name="tel" class="form-control" placeholder="123-456-7890">
+                                                    </div>
+                                                </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input type="text" name="tel" class="form-control" placeholder="donaldduck@gmail.com">
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Phone #:</label>
-                                                        <input type="text" name="tel" class="form-control" placeholder="+99-99-9999-9999" data-mask="+99-99-9999-9999">
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                        </div>
                                         </fieldset>
-                                        <h6>Your education</h6>
+                                        <h6>Billing Info</h6>
                                         <fieldset>
                                             <div class="row">
                                                 <div class="col-md-6">

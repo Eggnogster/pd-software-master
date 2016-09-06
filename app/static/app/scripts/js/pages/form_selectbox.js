@@ -105,33 +105,6 @@ $(function() {
 
 
 
-    //  Advanced usage
-    // ------------------------------
-
-    // jQuery deferred object
-    $(".selectbox-deferred-object").selectBoxIt({
-
-        autoWidth: false,
-        defaultText: "Greg Franko Github Repos",
-
-        // Populates the drop down using a jQuery deferred object
-        populate: function() {
-            var deferred = $.Deferred(),
-                arr = [],
-                x = -1;
-
-            $.ajax({
-                url: 'https://api.github.com/users/gfranko/repos'
-            }).done(function(data) {
-                while(++x < data.length) {
-                    arr.push(data[x].name);
-                }
-                deferred.resolve(arr);
-            });
-            return deferred;
-        }
-    });
-
 
     // Array of objects
     $(".selectbox-objects-array").selectBoxIt({
@@ -147,20 +120,6 @@ $(function() {
     });
 
 
-    // Array of strings
-    $(".selectbox-strings-array").selectBoxIt({
-        autoWidth: false,
-
-        // Populates the drop down using an array of strings
-        populate: [
-            "SelectBoxIt is:",
-            "a jQuery Plugin",
-            "a Select Box Replacement",
-            "a Stateful UI Widget"
-        ]
-    });
-
-
     // Single object
     $(".selectbox-single-object").selectBoxIt({
         autoWidth: false,
@@ -170,20 +129,6 @@ $(function() {
             value: "SelectBoxIt is:",
             text: "SelectBoxIt is:"
         }
-    });
-
-
-    // JSON array
-    $(".selectbox-json-array").selectBoxIt({
-        autoWidth: false,
-
-        // Populates the drop down using a JSON array
-        populate: {"data": [
-            {"text":"SelectBoxIt is:","value":"SelectBoxIt is:"},
-            {"text":"a jQuery Plugin","value":"a jQuery Plugin"},
-            {"text":"a Select Box Replacement","value":"a Select Box Replacement"},
-            {"text":"a Stateful UI Widget","value":"a Stateful UI Widget"}
-        ]}
     });
 
 
