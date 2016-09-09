@@ -2,6 +2,7 @@
 {% block nav-manage-office %}class="active"{% endblock %}
 {% load static from staticfiles %}
 {% block script %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/css/icons/fontawesome/styles.min.css' %}">
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switchery.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/ui/prism.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/pages/sidebar_dual.js' %}"></script>
@@ -17,21 +18,21 @@
 						        <div class="category-content no-padding">
 						        	<ul class="navigation navigation-alt navigation-accordion">
 							        	<li class="navigation-header">Company</li>
-                                        <li><a href="#"><i class="icon-portfolio"></i> Company Information</a></li>
-							        	<li><a href="#"><i class="icon-googleplus5"></i> Staff Management</a></li>
-							        	<li><a href="#"><i class="icon-compose"></i> Offices</a></li>
-							        	<li><a href="#"><i class="icon-collaboration"></i> Payroll Setup</a></li>
-                                        <li><a href="#"><i class="icon-collaboration"></i> Referral Manager</a></li>
-                                        <li><a href="#"><i class="icon-file-check"></i> Holiday Setup</a></li>
+                                        <li><a href="#"><i class="fa fa-briefcase"></i> Company Information</a></li>
+							        	<li><a href="#"><i class="fa fa-users"></i> Staff Management</a></li>
+							        	<li><a href="#"><i style="width:14px;" class="fa fa-building"></i> Offices</a></li>
+							        	<li><a href="#"><i style="width:14px;" class="fa fa-book"></i> Payroll Setup</a></li>
+                                        <li><a href="#"><i class="fa fa-sitemap"></i> Referral Manager</a></li>
+                                        <li><a href="#"><i style="width:14px;" class="fa fa-calendar"></i> Holiday Setup</a></li>
 								        <li class="navigation-header">Billing</li>
-							        	<li><a href="#"><i class="icon-user-plus"></i> Insurances</a></li>
-                                        <li><a href="#"><i class="icon-file-plus"></i> Billing Setup</a></li>
-							        	<li><a href="#"><i class="icon-file-plus"></i> Service Types</a></li>							        
+							        	<li><a href="#"><i class="fa fa-bank"></i> Insurances</a></li>
+                                        <li><a href="#"><i style="width:14px;" class="fa fa-dollar"></i> Billing Setup</a></li>
+							        	<li><a href="#"><i class="fa fa-tags"></i> Service Types</a></li>							        
 							        	<li class="navigation-header">Service Plan</li>
-							        	<li><a href="#"><i class="icon-reading"></i> Medications</a></li>
-							        	<li><a href="#"><i class="icon-make-group"></i> Diagnosis</a></li>
-                                        <li><a href="#"><i class="icon-make-group"></i> Task Codes</a></li>
-                                        <li><a href="#"><i class="icon-make-group"></i> Types of Care</a></li>
+							        	<li><a href="#"><i class="fa fa-medkit"></i> Medications</a></li>
+							        	<li><a href="#"><i style="width:14px;" class="fa fa-stethoscope"></i> Diagnosis</a></li>
+                                        <li><a href="#"><i class="fa fa-list-ol"></i> Task Codes</a></li>
+                                        <li><a href="#"><i class="fa fa-heartbeat"></i> Types of Care</a></li>
 							        </ul>
 					        	</div>
 				        	</div>
