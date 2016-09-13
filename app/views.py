@@ -91,7 +91,7 @@ def manageoffice(request):
         request,
         'app/manage-office.html',
         {
-            'title':'Manage Office',
+            'title':'Company Information',
             'message':'Your manage office.',
             'year':datetime.now().year,
         }
@@ -104,7 +104,7 @@ def staff(request):
         request,
         'app/staff.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Staff',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -117,7 +117,7 @@ def offices(request):
         request,
         'app/offices.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Offices',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -130,7 +130,7 @@ def payrollsetup(request):
         request,
         'app/payroll-setup.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Payroll Setup',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -143,7 +143,7 @@ def referralmanager(request):
         request,
         'app/referral-manager.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Referral Manager',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -156,7 +156,7 @@ def holidaysetup(request):
         request,
         'app/holiday-setup.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Holiday Setup',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -169,7 +169,7 @@ def insurances(request):
         request,
         'app/insurances.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Insurances',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -182,7 +182,7 @@ def billingsetup(request):
         request,
         'app/billing-setup.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Billing Setup',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -195,7 +195,7 @@ def servicetypes(request):
         request,
         'app/service-types.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Service Types',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -208,7 +208,7 @@ def medications(request):
         request,
         'app/medications.html',
         {
-            'title':'Manage Office Staff',
+            'title':'Medications',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -221,7 +221,7 @@ def diagnosis(request):
         request,
         'app/diagnosis.html',
         {
-            'title':'About',
+            'title':'Diagnosis',
             'message':'Your application description page.',
             'year':datetime.now().year,
         }
@@ -234,7 +234,7 @@ def taskcodes(request):
         request,
         'app/task-codes.html',
         {
-            'title':'About',
+            'title':'Task Codes',
             'message':'Your application description page.',
             'year':datetime.now().year,
         }
@@ -247,7 +247,7 @@ def typesofcare(request):
         request,
         'app/types-of-care.html',
         {
-            'title':'About',
+            'title':'Types of Care',
             'message':'Your application description page.',
             'year':datetime.now().year,
         }

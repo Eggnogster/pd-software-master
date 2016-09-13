@@ -18,38 +18,26 @@
         <!-- Basic table -->
         <div class="panel panel-flat">
             <div class="panel-heading">
-                <h5 class="panel-title">Client List</h5>
-
-                <div class="heading-elements-filters">
-                    <form action="#" class="form-horizontal">
-                        <div class="form-group">
-                            <label>Default select</label>
-                            <select class="selectbox-bootstrap btn-default">
-                                <option value="AK">Alaska</option>
-                                <option value="HI">Hawaii</option>
-                                <option value="CA">California</option>
-                                <option value="NV">Nevada</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="heading-elements-search">
-                    <form action="#" class="main-search">
-                        <div class="input-group content-group">
-                            <div class="has-feedback has-feedback-left">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <div class="form-control-feedback">
-                                    <i class="icon-search4 text-muted text-size-base"></i>
+                <h5 class="panel-title">Holiday Setup</h5>
+                <div class="heading-elements-container">
+                    <div class="heading-elements-search">
+                        <form action="#" class="main-search">
+                            <div class="input-group content-group">
+                                <div class="has-feedback has-feedback-left">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="form-control-feedback">
+                                        <i class="icon-search4 text-muted text-size-base"></i>
+                                    </div>
+                                </div>
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-info">Search</button>
                                 </div>
                             </div>
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-info">Search</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="heading-elements">
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_full"><i class="icon-add position-left"></i> Add Client</button>
+                        </form>
+                    </div>
+                    <div class="heading-elements">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_full"><i class="icon-add position-left"></i> Add Holiday</button>
+                    </div>
                 </div>
             </div>
             <div class="panel-body">
@@ -58,25 +46,21 @@
                 <table class="table table-sm table-bordered table-striped table-hover">
                     <thead>
                         <tr class="border-solid">
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>DOB</th>
-                            <th>Sex</th>
-                            <th>Payer Type</th>
-                            <th style="width:140px;">Status</th>
-                            <th style="width:100px;">Type</th>
+                            <th>Holiday Name</th>
+                            <th>Holiday Date</th>
+                            <th>Description</th>
+                            <th>Bill Rate</th>
+                            <th>Pay Rate</th>
                             <th style="width:100px;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Kopyov</td>
-                            <td>Want</td>
-                            <td>5/17/1990</td>
-                            <td>M</td>
-                            <td>Self Pay</td>
-                            <td>Deceased</td>
-                            <td><span class="label label-primary label-striped">Client</span></td>
+                            <td>Independence Day</td>
+                            <td>7/4/2017</td>
+                            <td>Fourth of July</td>
+                            <td>Time and a Half</td>
+                            <td>Time and a Half</td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>
@@ -85,45 +69,37 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Kopyov</td>
-                            <td>ddde</td>
-                            <td>5/17/1990</td>
-                            <td>M</td>
-                            <td>Self Pay</td>
-                            <td>Active</td>
-                            <td><span class="label label-warning label-striped">Lead</span></td>
+                            <td>Labor Day</td>
+                            <td>9/1/2017</td>
+                            <td>Day of Labor</td>
+                            <td>Double Time</td>
+                            <td>Double Time</td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>
-                                    <li><a href="#"><i class="icon-sync"></i></a></li>
                                     <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                            <td>Kopyov</td>
-                            <td>Eugene</td>
-                            <td>5/17/1990</td>
-                            <td>M</td>
-                            <td>Insurance</td>
-                            <td>Inactive</td>
-                            <td><span class="label label-warning label-striped">Lead</span></td>
+                            <td>Thanksgiving</td>
+                            <td>9/1/2017</td>
+                            <td>Eat Turkey</td>
+                            <td>Double Time</td>
+                            <td>Double Time</td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>
-                                    <li><a href="#"><i class="icon-sync"></i></a></li>
                                     <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                            <td>Kopyov</td>
-                            <td>Eugene</td>
-                            <td>5/17/1990</td>
-                            <td>M</td>
-                            <td>Insurance</td>
-                            <td>Active</td>
-                            <td><span class="label label-primary label-striped">Client</span></td>
+                            <td>Father's Day</td>
+                            <td>6/21/2017</td>
+                            <td>Call your dad</td>
+                            <td>Regular</td>
+                            <td>Regular</td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>

@@ -7,7 +7,7 @@
     <div class="page-header">
         <div class="page-header-content">
             <div class="page-title">
-                <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office > Staff</span></h4>
+                <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office > Task Codes</span></h4>
             </div>
 
             <div class="heading-elements">
@@ -25,37 +25,37 @@
         <div class="panel panel-flat">
             <div class="panel-heading">
                 <h5 class="panel-title">Client List</h5>
-
-                <div class="heading-elements-filters">
-                    <form action="#" class="form-horizontal">
-                        <div class="form-group">
-                            <label>Default select</label>
+                <div class="heading-elements-container">
+                    <div class="heading-elements-filters">
+                        <div class="heading-elements-label">
+                            Code Type
+                        </div>
+                        <div class="heading-elements-filter-container">
                             <select class="selectbox-bootstrap btn-default">
-                                <option value="AK">Alaska</option>
-                                <option value="HI">Hawaii</option>
-                                <option value="CA">California</option>
-                                <option value="NV">Nevada</option>
+                                <option value="All">All</option>
+                                <option value="ADL Code">ADL Code</option>
+                                <option value="Non-ADL Code">Non-ADL Code</option>
                             </select>
                         </div>
-                    </form>
-                </div>
-                <div class="heading-elements-search">
-                    <form action="#" class="main-search">
-                        <div class="input-group content-group">
-                            <div class="has-feedback has-feedback-left">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <div class="form-control-feedback">
-                                    <i class="icon-search4 text-muted text-size-base"></i>
+                    </div>
+                    <div class="heading-elements-search">
+                        <form action="#" class="main-search">
+                            <div class="input-group content-group">
+                                <div class="has-feedback has-feedback-left">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="form-control-feedback">
+                                        <i class="icon-search4 text-muted text-size-base"></i>
+                                    </div>
+                                </div>
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-info">Search</button>
                                 </div>
                             </div>
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-info">Search</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="heading-elements">
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_full"><i class="icon-add position-left"></i> Add Client</button>
+                        </form>
+                    </div>
+                    <div class="heading-elements">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_full"><i class="icon-add position-left"></i> Add Task Code</button>
+                    </div>
                 </div>
             </div>
             <div class="panel-body">
@@ -64,25 +64,21 @@
                 <table class="table table-sm table-bordered table-striped table-hover">
                     <thead>
                         <tr class="border-solid">
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>DOB</th>
-                            <th>Sex</th>
-                            <th>Payer Type</th>
-                            <th style="width:140px;">Status</th>
-                            <th style="width:100px;">Type</th>
+                            <th>Code</th>
+                            <th>Description</th>
+                            <th>Code Type</th>
                             <th style="width:100px;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Kopyov</td>
-                            <td>Want</td>
+                            <td>98</td>
+                            <td>Pet Care</td>
                             <td>5/17/1990</td>
                             <td>M</td>
                             <td>Self Pay</td>
                             <td>Deceased</td>
-                            <td><span class="label label-primary label-striped">Client</span></td>
+                            <td><span class="label label-primary label-striped label-client">Client</span></td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>
