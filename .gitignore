@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -45,3 +46,18 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+=======
+venv
+*.pyc
+staticfiles
+web.debug.config
+pk.ppk
+virtual
+bin/Microsoft.PythonTools.WebRole.dll
+obj/Debug/privateduty.pyproj.FileListAbsolute.txt
+obj/Debug/web.debug.config
+obj/Debug/web.config
+web.config
+web.debug.config
+web.debug.config
+>>>>>>> 23544f4eb5eb581dfbcc7c02887fddbe0d8aa447

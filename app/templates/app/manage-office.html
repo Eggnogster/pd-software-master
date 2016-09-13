@@ -1,0 +1,243 @@
+{% extends "app/layout.html" %}
+{% block nav-manage-office %}class="active"{% endblock %}
+{% load static from staticfiles %}
+{% block script %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/css/icons/fontawesome/styles.min.css' %}">
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switchery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/ui/prism.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/sidebar_dual.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/components_buttons.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jquery_ui/core.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/selectboxit.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/wizard_steps.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switch.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/notifications/bootbox.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/notifications/sweet_alert.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/components_modals.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/wizards/steps.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/uniform.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jasny_bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/validation/validate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/extensions/cookie.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/form_checkboxes_radios.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/form_selectbox.js' %}"></script>
+{% endblock script %}
+{% block secondary %}
+            	<!-- Secondary sidebar -->
+			<div class="sidebar sidebar-secondary sidebar-default">
+				<div class="sidebar-content">
+					<!-- Secondary navigation -->
+					<div class="sidebar-category sidebar-category-visible">
+						<div class="category-content no-padding">
+                            <div class="sidebar-category">
+						        <div class="category-content no-padding">
+						        	<ul class="navigation navigation-alt navigation-accordion">
+							        	<li class="navigation-header">Company</li>
+                                        <li><a href="{% url 'manage-office' %}"><i class="fa fa-briefcase"></i> Company Information</a></li>
+							        	<li><a href="{% url 'staff' %}"><i class="fa fa-users"></i> Staff Management</a></li>
+							        	<li><a href="{% url 'offices' %}"><i style="width:14px;" class="fa fa-building"></i> Offices</a></li>
+							        	<li><a href="{% url 'payroll-setup' %}"><i style="width:14px;" class="fa fa-book"></i> Payroll Setup</a></li>
+                                        <li><a href="{% url 'referral-manager' %}"><i class="fa fa-sitemap"></i> Referral Manager</a></li>
+                                        <li><a href="{% url 'holiday-setup' %}"><i style="width:14px;" class="fa fa-calendar"></i> Holiday Setup</a></li>
+								        <li class="navigation-header">Billing</li>
+							        	<li><a href="{% url 'insurances' %}"><i class="fa fa-bank"></i> Insurances</a></li>
+                                        <li><a href="{% url 'billing-setup' %}"><i style="width:14px;" class="fa fa-dollar"></i> Billing Setup</a></li>
+							        	<li><a href="{% url 'service-types' %}"><i class="fa fa-tags"></i> Service Types</a></li>							        
+							        	<li class="navigation-header">Service Plan</li>
+							        	<li><a href="{% url 'medications' %}"><i class="fa fa-medkit"></i> Medications</a></li>
+							        	<li><a href="{% url 'diagnosis' %}"><i style="width:14px;" class="fa fa-stethoscope"></i> Diagnosis</a></li>
+                                        <li><a href="{% url 'task-codes' %}"><i class="fa fa-list-ol"></i> Task Codes</a></li>
+                                        <li><a href="{% url 'types-of-care' %}"><i class="fa fa-heartbeat"></i> Types of Care</a></li>
+							        </ul>
+					        	</div>
+				        	</div>
+						</div>
+					</div>
+					<!-- /Secondary navigation -->
+
+				</div>
+			</div>
+			<!-- /Secondary sidebar -->
+{% endblock secondary %}
+{% block content %}
+<!-- Main content -->
+<div class="content-wrapper">
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="page-title">
+                <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office > Company Information</span></h4>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+    <!-- Content area -->
+    <div class="content">
+        <!-- Row label (horizontal form) -->
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title">Company Information</h6>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" action="#">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Primary Contact Title</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Prof">Prof</option>
+                                        <option value="Dr">Dr</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Primary Contact Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="John Doe">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Address 1</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="1234 Happy St">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Address 2</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="Suite 1000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">City</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="Austin">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">State</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="Texas">Texas</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Prof">Prof</option>
+                                        <option value="Dr">Dr</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Country</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="United States">United States</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Prof">Prof</option>
+                                        <option value="Dr">Dr</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Postal Code</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="12345">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Office Phone</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="col-md-1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Mobile Phone</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="123-456-7890">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Other Phone</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="123-456-7890">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Fax</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="123-456-7890">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Email Address</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="donaldduck@gmail.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Website</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="www.donaldduck.com">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-info  btn-loading" data-loading-text="<i class='icon-spinner4 spinner'></i>"><i class="icon-spinner4 position-left"></i> Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /row label (horizontal form) -->
+    </div>
+    <!-- /content area -->
+</div>
+<!-- /main content -->
+    {% endblock content %}

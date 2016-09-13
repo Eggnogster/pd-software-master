@@ -1,0 +1,291 @@
+{% extends "app/layout.html" %}
+{% block nav-reports %}class="active"{% endblock %}
+{% load static from staticfiles %}
+{% block script %}
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/echarts.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/charts/echarts/funnels_chords.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/theme/limitless.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/chart/funnel.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/chart/pie.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/visualization/echarts/chart/chord.js' %}"></script>
+{% endblock %}
+{% block content %}
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+				<!-- Page header -->
+				<div class="page-header page-header-default">
+					<div class="page-header-content">
+						<div class="page-title">
+							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Reports</span></h4>
+						</div>
+
+						<div class="heading-elements">
+							<div class="heading-btn-group">
+								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
+								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
+								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Schedule</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /page header -->
+
+
+				<!-- Content area -->
+				<div class="content">
+
+					<!-- Funnel charts -->
+					<div class="row">
+						<div class="col-md-6">
+
+							<!-- Basic funnel chart -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Basic funnel chart</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="funnel_desc"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /bacis funnel chart -->
+
+
+							<!-- Right alignment -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Right funnel alignment</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="funnel_right"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /right alignment -->
+
+
+							<!-- Multiple funnels (overlay) -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Multiple funnels (overlay)</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="funnel_multiple_overlay"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /multiple funnels (overlay) -->
+
+						</div>
+
+						<div class="col-md-6">
+
+							<!-- Data sorting control -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Data sorting control</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="funnel_asc"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /data sorting control -->
+
+
+							<!-- Left funnel alignment -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Left funnel alignment</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="funnel_left"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /left funnel alignment -->
+
+
+							<!-- Multiple funnels (separate) -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Multiple funnels (separate)</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="funnel_multiple_separate"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /multiple funnels (separate) -->
+
+						</div>
+					</div>
+					<!-- /funnel charts -->
+
+
+					<!-- Chord diagrams title -->
+					<h6 class="content-group text-semibold">
+						Chord diagrams
+						<small class="display-block">Basic examples of <code>chord</code> diagram type</small>
+					</h6>
+					<!-- /chord diagrams title -->
+
+
+					<!-- Chord diagrams -->
+					<div class="row">
+						<div class="col-md-6">
+
+							<!-- Basic chord -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Basic chord chart</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="chord_basic"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /basic chord -->
+
+
+							<!-- Sorting options -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Sorting options</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="chord_sorting"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /sorting options -->
+
+						</div>
+
+						<div class="col-md-6">
+
+							<!-- Display scales -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Display scales</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="chord_scale"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /display scales -->
+
+
+							<!-- Non-ribbon chord -->
+							<div class="panel panel-flat">
+								<div class="panel-heading">
+									<h5 class="panel-title">Non-ribbon chord</h5>
+									<div class="heading-elements">
+										<ul class="icons-list">
+					                		<li><a data-action="collapse"></a></li>
+					                		<li><a data-action="reload"></a></li>
+					                		<li><a data-action="close"></a></li>
+					                	</ul>
+				                	</div>
+								</div>
+
+								<div class="panel-body">
+									<div class="chart-container has-scroll">
+										<div class="chart has-fixed-height has-minimum-width" id="chord_non_ribbon"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /non-ribbon chord -->
+
+						</div>
+					</div>
+					<!-- /chord diagrams -->
+
+				</div>
+				<!-- /content area -->
+			</div>
+			<!-- /main content -->
+{% endblock %}
