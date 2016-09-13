@@ -6,8 +6,25 @@
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switchery.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/plugins/ui/prism.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'app/scripts/js/pages/sidebar_dual.js' %}"></script>
-{% endblock %}
-{% block content %}
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/components_buttons.js' %}"></script>>
+
+<script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jquery_ui/core.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/selectboxit.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/wizard_steps.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switch.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/notifications/bootbox.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/notifications/sweet_alert.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/components_modals.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/wizards/steps.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/uniform.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jasny_bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/validation/validate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/extensions/cookie.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/form_checkboxes_radios.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/form_selectbox.js' %}"></script>
+{% endblock script %}
+{% block secondary %}
             	<!-- Secondary sidebar -->
 			<div class="sidebar sidebar-secondary sidebar-default">
 				<div class="sidebar-content">
@@ -18,21 +35,21 @@
 						        <div class="category-content no-padding">
 						        	<ul class="navigation navigation-alt navigation-accordion">
 							        	<li class="navigation-header">Company</li>
-                                        <li><a href="#"><i class="fa fa-briefcase"></i> Company Information</a></li>
-							        	<li><a href="#"><i class="fa fa-users"></i> Staff Management</a></li>
-							        	<li><a href="#"><i style="width:14px;" class="fa fa-building"></i> Offices</a></li>
-							        	<li><a href="#"><i style="width:14px;" class="fa fa-book"></i> Payroll Setup</a></li>
-                                        <li><a href="#"><i class="fa fa-sitemap"></i> Referral Manager</a></li>
-                                        <li><a href="#"><i style="width:14px;" class="fa fa-calendar"></i> Holiday Setup</a></li>
+                                        <li><a href="{% url 'manage-office' %}"><i class="fa fa-briefcase"></i> Company Information</a></li>
+							        	<li><a href="{% url 'staff' %}"><i class="fa fa-users"></i> Staff Management</a></li>
+							        	<li><a href="{% url 'offices' %}"><i style="width:14px;" class="fa fa-building"></i> Offices</a></li>
+							        	<li><a href="{% url 'payroll-setup' %}"><i style="width:14px;" class="fa fa-book"></i> Payroll Setup</a></li>
+                                        <li><a href="{% url 'referral-manager' %}"><i class="fa fa-sitemap"></i> Referral Manager</a></li>
+                                        <li><a href="{% url 'holiday-setup' %}"><i style="width:14px;" class="fa fa-calendar"></i> Holiday Setup</a></li>
 								        <li class="navigation-header">Billing</li>
-							        	<li><a href="#"><i class="fa fa-bank"></i> Insurances</a></li>
-                                        <li><a href="#"><i style="width:14px;" class="fa fa-dollar"></i> Billing Setup</a></li>
-							        	<li><a href="#"><i class="fa fa-tags"></i> Service Types</a></li>							        
+							        	<li><a href="{% url 'insurances' %}"><i class="fa fa-bank"></i> Insurances</a></li>
+                                        <li><a href="{% url 'billing-setup' %}"><i style="width:14px;" class="fa fa-dollar"></i> Billing Setup</a></li>
+							        	<li><a href="{% url 'service-types' %}"><i class="fa fa-tags"></i> Service Types</a></li>							        
 							        	<li class="navigation-header">Service Plan</li>
-							        	<li><a href="#"><i class="fa fa-medkit"></i> Medications</a></li>
-							        	<li><a href="#"><i style="width:14px;" class="fa fa-stethoscope"></i> Diagnosis</a></li>
-                                        <li><a href="#"><i class="fa fa-list-ol"></i> Task Codes</a></li>
-                                        <li><a href="#"><i class="fa fa-heartbeat"></i> Types of Care</a></li>
+							        	<li><a href="{% url 'medications' %}"><i class="fa fa-medkit"></i> Medications</a></li>
+							        	<li><a href="{% url 'diagnosis' %}"><i style="width:14px;" class="fa fa-stethoscope"></i> Diagnosis</a></li>
+                                        <li><a href="{% url 'task-codes' %}"><i class="fa fa-list-ol"></i> Task Codes</a></li>
+                                        <li><a href="{% url 'types-of-care' %}"><i class="fa fa-heartbeat"></i> Types of Care</a></li>
 							        </ul>
 					        	</div>
 				        	</div>
@@ -43,322 +60,184 @@
 				</div>
 			</div>
 			<!-- /Secondary sidebar -->
-			<!-- Main content -->
-			<div class="content-wrapper">
-
-				<!-- Page header -->
-				<div class="page-header page-header-default">
-					<div class="page-header-content">
-						<div class="page-title">
-							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office</span></h4>
-						</div>
-
-					</div>
-				</div>
-				<!-- /page header -->
-
-
-				<!-- Content area -->
-				<div class="content">
-					<!-- Sidebars overview -->
-					<div class="panel panel-flat">
-						<div class="panel-heading">
-							<h5 class="panel-title">Sidebars overview</h5>
-							<div class="heading-elements">
-								<ul class="icons-list">
-			                		<li><a data-action="collapse"></a></li>
-			                		<li><a data-action="reload"></a></li>
-			                		<li><a data-action="close"></a></li>
-			                	</ul>
-		                	</div>
-						</div>
-
-						<div class="panel-body">
-							<p class="content-group">Sidebar - vertical area that displays onscreen and presents widget components and website navigation menu in a text-based hierarchical form. All sidebars are css-driven - just add one of css classes to the <code>body</code> tag and/or <code>.sidebar</code> container, and sidebar will change its width and color. No js, css only. Although sidebar type is based on css, buttons do their job with jQuery - they switch necessary classes in <code>&lt;body></code> tag. Below you'll find summarized tables with all available <code>button</code> and sidebar container classes. By default the template includes 6 different sidebar types and combinations:</p>
-
-							<div class="content-group">
-								<h6 class="text-semibold">1. Default sidebar</h6>
-								<p>Default template sidebar has <code>260px</code> width, aligned to the left (to the right in RTL version) and has dark blue background color. All navigation levels are based on accordion <strong>or</strong> collapsible functionality, open on click. Supports 2 versions: static and fixed. Fixed version can be used with native or custom scrollbars.</p>
-							</div>
-
-							<div class="content-group">
-								<h6 class="text-semibold">2. Mini sidebar</h6>
-								<p>Mini sidebar has <code>56px</code> width, no text in parent level of menu items, aligned to the left (to the right in RTL version) and has dark blue background color. Second navigation level opens on parent level hover, absolute positioned, other children levels are based on accordion or collapsible functionality, open on click. It is <strong>required</strong> to add <code>.sidebar-xs</code> class to the <code>&lt;body></code> tag. This class is responsible for sidebar width and main navigation. By default all components except main navigation are hidden in mini sidebar.</p>
-							</div>
-
-							<div class="content-group">
-								<h6 class="text-semibold">3. Dual sidebar</h6>
-								<p>Main sidebar has <code>260px</code> width or <code>56px</code> (if <code>.sidebar-xs</code> class added). Secondary sidebar has fixed width of <code>260px</code>, which is identical to default and opposite sidebars, so different sidebar components can be placed to all these sidebars. Main and secondary sidebars can contain any content - menu, navigation, buttons, lists, tabs etc. In this type of sidebar only main sidebar is collapsible.</p>
-							</div>
-
-							<div class="content-group">
-								<h6 class="text-semibold">4. Double sidebar</h6>
-								<p>Double sidebar includes additional sidebar displayed on the opposite side of the main sidebar. It has a static position, appears as an additional component with 100% height and pushes content left/right. There are 2 different ways of displaying alternative sidebar: first - when it collapses main sidebar from default to mini width and second - when it hides the main sidebar. For these actions are responsible 2 different buttons - <code>.sidebar-opposite-toggle</code> and <code>.sidebar-opposite-fix</code>.</p>
-							</div>
-
-							<div class="content-group">
-								<h6 class="text-semibold">5. Dual double sidebar</h6>
-								<p>Dual and Double sidebars can be used together, so basically it is a 4 column layout. When opposite sidebar is shown, additional options are available: hide main sidebar, hide secondary sidebar, hide all sidebars or collapse main sidebar width. Since opposite sidebar is hidden by default, by manipulating classes you can display all 4 sidebars at once. Options are accessible via proper button and/or body classes.</p>
-							</div>
-
-							<div class="content-group">
-								<h6 class="text-semibold">6. Detached sidebar</h6>
-								<p>Sidebar usually is not a part of content and mainly used for navigation. Limitless allows you to use sidebar outside and inside content area. Detached sidebar isn't based on grid and has the same width as other sidebars, this means all sidebar components can be placed inside detached sidebar. Supports left and right positioning.</p>
-							</div>
-						</div>
-					</div>
-					<!-- /sidebars overview -->
-
-
-					<!-- Button classes -->
-					<div class="panel panel-flat">
-						<div class="panel-heading">
-							<h5 class="panel-title">Button classes</h5>
-							<div class="heading-elements">
-								<ul class="icons-list">
-			                		<li><a data-action="collapse"></a></li>
-			                		<li><a data-action="reload"></a></li>
-			                		<li><a data-action="close"></a></li>
-			                	</ul>
-		                	</div>
-						</div>
-
-						<div class="panel-body">
-							<h6 class="text-semibold">Overview</h6>
-							<p class="content-group">This table displays all optional <code>button</code> classes, responsible for the sidebar appearance. Depending on the sidebar type, add one of these classes to any button or link and this element will handle sidebar control. Multiple controls are also available - add as many sidebar controls as you wish. Pleas note: these classes don't change sidebar markup, only its CSS.</p>
-							<div class="table-responsive content-group-lg">
-								<table class="table table-bordered">
-									<thead>
-										<tr>
-											<th style="width: 300px;">Button class</th>
-											<th>Action</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><code>.sidebar-main-toggle</code></td>
-											<td>Collapsible sidebar. Changes main sidebar width from default to mini. This button is added to all pages by default.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-main-hide</code></td>
-											<td>Hides and shows <code>main</code> sidebar. Used mostly in dual sidebar type to hide main sidebar. In other layouts this button does the same job as <code>.sidebar-hide-all</code> button.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-all-hide</code></td>
-											<td>Hideable sidebar. Hides and shows <code>main</code> sidebar. Works with all sidebar types, except opposite sidebar.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-opposite-fix</code></td>
-											<td>Double sidebar with fixed width. If alt sidebar is shown, main sidebar stays the same and doesn't change the width.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-opposite-toggle</code></td>
-											<td>Collapsible double sidebar. If opposite sidebar is shown, main sidebar changes its width from default to mini. Works with all sidebar types - single and dual.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-opposite-main-hide</code></td>
-											<td>Hides and shows <code>main</code> sidebar in dual sidebar layout. If opposite sidebar is shown, main sidebar is hidden. This works only in dual double sidebar version of layout.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-secondary-hide</code></td>
-											<td>Hides/shows <code>secondary</code> sidebar in dual sidebar layout. Secondary sidebar supports only toggle functionality and always has fixed width of <code>260px</code>.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-opposite-secondary-hide</code></td>
-											<td>Hides/shows <code>secondary</code> sidebar in dual sidebar layout. If opposite sidebar is shown, secondary sidebar is hidden. This works only in dual double sidebar version of layout.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-opposite-hide</code></td>
-											<td>Hides/shows <code>all</code> sidebars when opposite sidebar is shown. If opposite sidebar is shown, all sidebars are hidden. This works in all layout types.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-detached-hide</code></td>
-											<td>Hides/shows <code>detached</code> sidebars. Detached sidebars aren't connected with other sidebars, so this is the only button that controls its visibility.</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<h6 class="text-semibold">Example Markup</h6>
-							<div class="row">
-								<div class="col-md-6">
-									<p>Default placement of sidebar control buttons is top navbar:</p>
-									<pre class="language-markup content-group" data-line="7-11"><code>&lt;!-- Navbar placement -->
-&lt;div class="navbar navbar-inverse">
-	&lt;div class="navbar-header">...&lt;/div>
-	&lt;ul class="nav navbar-nav">
-		&lt;li>
-			&lt;a class="sidebar-main-toggle">
-				&lt;i class="icon-menu">&lt;/i>
-			&lt;/a>
-		&lt;/li>
-	&lt;/ul>
-&lt;/div>
-&lt;!-- /navbar placement -->
-</code></pre>
-								</div>
-
-								<div class="col-md-6">
-									<p>Here is an example of button inside panel heading:</p>
-									<pre class="language-markup content-group" data-line="6-9"><code>&lt;!-- Panel heading placement -->
-&lt;div class="panel panel-default">
-	&lt;div class="panel-heading">
-		&lt;h5 class="panel-title">Panel title&lt;/h5>
-		&lt;div class="heading-elements">
-			&lt;button type="button" class="sidebar-main-toggle">
-				&lt;i class="icon-menu">&lt;/i>
-				Collapse sidebar
-			&lt;/button>
-		&lt;/div>
-	&lt;/div>
-	&lt;div class="panel-body">...&lt;/div>
-&lt;/div>
-&lt;!-- /panel heading placement -->
-</code></pre>
-								</div>
-							</div>
-
-
-						</div>
-					</div>
-					<!-- /button classes -->
-
-
-					<!-- Sidebar classes -->
-					<div class="panel panel-flat">
-						<div class="panel-heading">
-							<h5 class="panel-title">Sidebar classes</h5>
-							<div class="heading-elements">
-								<ul class="icons-list">
-			                		<li><a data-action="collapse"></a></li>
-			                		<li><a data-action="reload"></a></li>
-			                		<li><a data-action="close"></a></li>
-			                	</ul>
-		                	</div>
-						</div>
-
-						<div class="panel-body">
-							<h6 class="text-semibold">Overview</h6>
-							<p class="content-group">This table demonstrates all classes for <code>sidebar</code> container, responsible for the sidebar width and color. Almost all these classes are mandatory, some of them are responsible for proper styling or have a specific code attached to this class (like <code>.sidebar-main</code> class, which has collapsible functionality attached). All classes can be combined depending on the type of sidebar:</p>
-							<div class="table-responsive content-group-lg">
-								<table class="table table-bordered">
-									<thead>
-										<tr>
-											<th style="width: 300px">Body class</th>
-											<th>Description</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><code>.sidebar</code></td>
-											<td>Default sidebar class, should be added in all layout types.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-main</code></td>
-											<td>Defines main sidebar. Mini sidebar <code>.sidebar-xs</code> class takes effect only if class <code>.sidebar-main</code> specified. By default all components except main navigation are hidden in mini sidebar.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-secondary</code></td>
-											<td>Defines secondary sidebar in dual sidebar layout. Has fixed <code>260px</code> width.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-opposite</code></td>
-											<td>Defines opposite sidebar in double sidebar layout. Has fixed <code>260px</code> width and appears on the opposite side from the main sidebar.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-default</code></td>
-											<td>Defines light sidebar. This class can be applied to all sidebar types and positions.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar.bg-*</code></td>
-											<td>Defines sidebar background color. According to the custom color system, sidebar background color can be changed to one of the available colors by adding a proper class to the main sidebar container.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-detached</code></td>
-											<td>Needs to be added to the parent container. Also requires <code>.has-detached-left</code> or <code>.has-detached-right</code> added to the <code>&lt;body></code> tag.</td>
-										</tr>
-										<tr>
-											<td><code>.sidebar-separate</code></td>
-											<td>Removes background and border from sidebar and displays categories as separate widgets. Mainly used with detached sidebar.</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<h6 class="text-semibold">Example Markup</h6>
-							<div class="row">
-								<div class="col-md-6">
-									<p>Default left aligned sidebar markup:</p>
-									<pre class="language-markup content-group" data-line="2"><code>&lt;!-- Default sidebar layout -->
-&lt;body>
-
-	&lt;!-- Page container -->
-	&lt;div class="page-container">
-
-		&lt;!-- Page content -->
-		&lt;div class="page-content">
-
-			&lt;!-- Main sidebar -->
-			&lt;div class="sidebar sidebar-main">
-				&lt;div class="sidebar-content">...&lt;/div>
-			&lt;/div>
-			&lt;!-- /main sidebar -->
-
-			&lt;!-- Main content -->
-			&lt;div class="content-wrapper">...&lt;/div>
-			&lt;!-- /main content -->
-
-		&lt;/div>
-		&lt;!-- /page content -->
-
-	&lt;/div>
-	&lt;!-- /page container -->
-
-&lt;/body>
-&lt;!-- /default sidebar layout -->
-</code></pre>
-
-								</div>
-
-								<div class="col-md-6">
-									<p>Mini sidebar markup. The only difference is <code>&lt;body></code> class:</p>
-									<pre class="language-markup content-group" data-line="2"><code>&lt;!-- Mini sidebar layout -->
-&lt;body class="sidebar-xs">
-
-	&lt;!-- Page container -->
-	&lt;div class="page-container">
-
-		&lt;!-- Page content -->
-		&lt;div class="page-content">
-
-			&lt;!-- Main sidebar -->
-			&lt;div class="sidebar sidebar-main">
-				&lt;div class="sidebar-content">...&lt;/div>
-			&lt;/div>
-			&lt;!-- /main sidebar -->
-
-			&lt;!-- Main content -->
-			&lt;div class="content-wrapper">...&lt;/div>
-			&lt;!-- /main content -->
-
-		&lt;/div>
-		&lt;!-- /page content -->
-
-	&lt;/div>
-	&lt;!-- /page container -->
-
-&lt;/body>
-&lt;!-- /mini sidebar layout -->
-</code></pre>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /sidebar classes -->
-
-				</div>
-				<!-- /content area -->
-
-			</div>
-			<!-- /main content -->
-{% endblock %}
+{% endblock secondary %}
+{% block content %}
+<!-- Main content -->
+<div class="content-wrapper">
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="page-title">
+                <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office > Company Information</span></h4>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+    <!-- Content area -->
+    <div class="content">
+        <!-- Row label (horizontal form) -->
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title">Company Information</h6>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" action="#">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Primary Contact Title</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Prof">Prof</option>
+                                        <option value="Dr">Dr</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Primary Contact Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="John Doe">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Address 1</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="1234 Happy St">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Address 2</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="Suite 1000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">City</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="Austin">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">State</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="Texas">Texas</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Prof">Prof</option>
+                                        <option value="Dr">Dr</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Country</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="United States">United States</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Prof">Prof</option>
+                                        <option value="Dr">Dr</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Postal Code</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="12345">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Office Phone</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="col-md-1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Mobile Phone</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="123-456-7890">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Other Phone</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="123-456-7890">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Fax</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="123-456-7890">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Email Address</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="donaldduck@gmail.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Website</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="www.donaldduck.com">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-info  btn-loading" data-loading-text="<i class='icon-spinner4 spinner'></i>"><i class="icon-spinner4 position-left"></i> Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /row label (horizontal form) -->
+    </div>
+    <!-- /content area -->
+</div>
+<!-- /main content -->
+    {% endblock content %}

@@ -1,0 +1,585 @@
+{% extends "app/manage-office.html" %} 
+{% block content %}
+			<!-- Main content -->
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="page-title">
+                <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office > Staff</span></h4>
+            </div>
+
+            <div class="heading-elements">
+                <div class="heading-btn-group">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- Basic table -->
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                    <h5 class="panel-title">Referral Companies</h5>
+                <div class="heading-elements-container">
+                    <div class="heading-elements-search">
+                        <form action="#" class="main-search">
+                            <div class="input-group content-group">
+                                <div class="has-feedback has-feedback-left">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="form-control-feedback">
+                                        <i class="icon-search4 text-muted text-size-base"></i>
+                                    </div>
+                                </div>
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-info">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="heading-elements">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_full"><i class="icon-add position-left"></i> Add Referral</button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+            </div>
+            <div class="table-responsive">
+                <table class="table table-sm table-bordered table-striped table-hover">
+                    <thead>
+                        <tr class="border-solid">
+                            <th>Company Name</th>
+                            <th>Primary Contact</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Fax</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th style="width:100px;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Company A</td>
+                            <td>Donald Duck</td>
+                            <td>1234 Happy St Austin, Texas 78701</td>
+                            <td>123-456-7890</td>
+                            <td>123-456-7890</td>
+                            <td>donaldduck@gmail.com</td>
+                            <td>Active</td>
+                            <td>
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-pencil7"></i></a></li>
+                                    <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Company A</td>
+                            <td>Donald Duck</td>
+                            <td>1234 Happy St Austin, Texas 78701</td>
+                            <td>123-456-7890</td>
+                            <td>123-456-7890</td>
+                            <td>donaldduck@gmail.com</td>
+                            <td>Active</td>
+                            <td>
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-pencil7"></i></a></li>
+                                    <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Company A</td>
+                            <td>Donald Duck</td>
+                            <td>1234 Happy St Austin, Texas 78701</td>
+                            <td>123-456-7890</td>
+                            <td>123-456-7890</td>
+                            <td>donaldduck@gmail.com</td>
+                            <td>Active</td>
+                            <td>
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-pencil7"></i></a></li>
+                                    <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Company A</td>
+                            <td>Donald Duck</td>
+                            <td>1234 Happy St Austin, Texas 78701</td>
+                            <td>123-456-7890</td>
+                            <td>123-456-7890</td>
+                            <td>donaldduck@gmail.com</td>
+                            <td>Active</td>
+                            <td>
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-pencil7"></i></a></li>
+                                    <li class="text-danger-600"><a href="#"><i class="icon-trash"></i></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /basic table -->
+        <!-- Full width modal -->
+        <div id="modal_full" class="modal fade">
+            <div class="modal-dialog modal-full">
+                <div class="modal-content">
+                    <!-- Wizard with validation -->
+                    <div class="panel panel-white">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Add Client</h6>
+                        </div>
+                        <form class="steps-validation" action="#">
+                            <h6>Demographics</h6>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>First Name: <span class="text-danger">*</span></label>
+                                            <input type="text" name="name" class="form-control required" placeholder="John">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Last Name: <span class="text-danger">*</span></label>
+                                            <input type="text" name="name" class="form-control required" placeholder="Doe">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="form-group">
+                                            <label>Lead?</label>
+                                            <div class="checkbox checkbox-switch">
+                                                <label>
+                                                    <input type="checkbox" data-on-text="Yes" data-off-text="No" data-on-color="info" class="switch" checked="checked">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label>Sex</label>
+                                        <div class="form-group">
+                                            <select class="selectbox-bootstrap btn-default">
+                                                <option value="M">Male</option>
+                                                <option value="F">Female</option>
+                                                <option value="O">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Date of birth:</label>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <select name="birth-month" data-placeholder="Month" class="select">
+                                                        <option></option>
+                                                        <option value="1">January</option>
+                                                        <option value="2">February</option>
+                                                        <option value="3">March</option>
+                                                        <option value="4">April</option>
+                                                        <option value="5">May</option>
+                                                        <option value="6">June</option>
+                                                        <option value="7">July</option>
+                                                        <option value="8">August</option>
+                                                        <option value="9">September</option>
+                                                        <option value="10">October</option>
+                                                        <option value="11">November</option>
+                                                        <option value="12">December</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <select name="birth-day" data-placeholder="Day" class="select">
+                                                        <option></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="...">...</option>
+                                                        <option value="31">31</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <select name="birth-year" data-placeholder="Year" class="select">
+                                                        <option></option>
+                                                        <option value="1">1980</option>
+                                                        <option value="2">1981</option>
+                                                        <option value="3">1982</option>
+                                                        <option value="4">1983</option>
+                                                        <option value="5">1984</option>
+                                                        <option value="6">1985</option>
+                                                        <option value="7">1986</option>
+                                                        <option value="8">1987</option>
+                                                        <option value="9">1988</option>
+                                                        <option value="10">1989</option>
+                                                        <option value="11">1990</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label>Language</label>
+                                        <div class="form-group">
+                                            <select class="selectbox-bootstrap btn-default">
+                                                <option value="English">English</option>
+                                                <option value="Russian">Russian</option>
+                                                <option value="O">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Marital Status</label>
+                                        <div class="form-group">
+                                            <select class="selectbox-bootstrap btn-default">
+                                                <option value="Married">Married</option>
+                                                <option value="Single">Single</option>
+                                                <option value="O">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>SSN:</label>
+                                            <input type="text" name="tel" class="form-control" placeholder="123-45-6789">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Veteran?</label>
+                                        <div class="form-group">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="radio-inline-left" class="styled" checked="checked">
+                                                Yes
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="radio-inline-left" class="styled">
+                                                No
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="radio-inline-left" class="styled">
+                                                Spouse
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Address 1</label>
+                                            <input type="text" name="tel" class="form-control" placeholder="1234 Happy St">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Address 2</label>
+                                            <input type="text" name="tel" class="form-control" placeholder="Apt 123">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>City</label>
+                                            <input type="text" name="tel" class="form-control" placeholder="Austin">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>State</label>
+                                        <div class="form-group">
+                                            <select class="selectbox-bootstrap btn-default">
+                                                <option value="TX">TX</option>
+                                                <option value="CA">CA</option>
+                                                <option value="VA">VA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Postal Code</label>
+                                            <input type="text" name="tel" class="form-control" placeholder="12345">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Phone</label>
+                                            <input type="text" name="tel" class="form-control" placeholder="123-456-7890">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Other Phone</label>
+                                            <input type="text" name="tel" class="form-control" placeholder="123-456-7890">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="text" name="tel" class="form-control" placeholder="donaldduck@gmail.com">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <h6>Billing Info</h6>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>University: <span class="text-danger">*</span></label>
+                                            <input type="text" name="university" placeholder="University name" class="form-control required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Country:</label>
+                                            <select name="university-country" data-placeholder="Choose a Country..." class="select">
+                                                <option></option>
+                                                <option value="1">United States</option>
+                                                <option value="2">France</option>
+                                                <option value="3">Germany</option>
+                                                <option value="4">Spain</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Degree level: <span class="text-danger">*</span></label>
+                                            <input type="text" name="degree-level" placeholder="Bachelor, Master etc." class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Specialization:</label>
+                                            <input type="text" name="specialization" placeholder="Design, Development etc." class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>From:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select name="education-from-month" data-placeholder="Month" class="select">
+                                                                <option></option>
+                                                                <option value="January">January</option>
+                                                                <option value="...">...</option>
+                                                                <option value="December">December</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select name="education-from-year" data-placeholder="Year" class="select">
+                                                                <option></option>
+                                                                <option value="1995">1995</option>
+                                                                <option value="...">...</option>
+                                                                <option value="1980">1980</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>To:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select name="education-to-month" data-placeholder="Month" class="select">
+                                                                <option></option>
+                                                                <option value="January">January</option>
+                                                                <option value="...">...</option>
+                                                                <option value="December">December</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select name="education-to-year" data-placeholder="Year" class="select">
+                                                                <option></option>
+                                                                <option value="1995">1995</option>
+                                                                <option value="...">...</option>
+                                                                <option value="1980">1980</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Language of education:</label>
+                                            <input type="text" name="education-language" placeholder="English, German etc." class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <h6>Your experience</h6>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Company: <span class="text-danger">*</span></label>
+                                            <input type="text" name="experience-company" placeholder="Company name" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Position: <span class="text-danger">*</span></label>
+                                            <input type="text" name="experience-position" placeholder="Company name" class="form-control required">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>From:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select name="education-from-month" data-placeholder="Month" class="select">
+                                                                <option></option>
+                                                                <option value="January">January</option>
+                                                                <option value="...">...</option>
+                                                                <option value="December">December</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select name="education-from-year" data-placeholder="Year" class="select">
+                                                                <option></option>
+                                                                <option value="1995">1995</option>
+                                                                <option value="...">...</option>
+                                                                <option value="1980">1980</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>To:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select name="education-to-month" data-placeholder="Month" class="select">
+                                                                <option></option>
+                                                                <option value="January">January</option>
+                                                                <option value="...">...</option>
+                                                                <option value="December">December</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select name="education-to-year" data-placeholder="Year" class="select">
+                                                                <option></option>
+                                                                <option value="1995">1995</option>
+                                                                <option value="...">...</option>
+                                                                <option value="1980">1980</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Brief description:</label>
+                                            <textarea name="experience-description" rows="4" cols="4" placeholder="Tasks and responsibilities" class="form-control"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="display-block">Recommendations:</label>
+                                            <input name="recommendations" type="file" class="file-styled">
+                                            <span class="help-block">Accepted formats: pdf, doc. Max file size 2Mb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <h6>Additional info</h6>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="display-block">Applicant resume:</label>
+                                            <input type="file" name="resume" class="file-styled">
+                                            <span class="help-block">Accepted formats: pdf, doc. Max file size 2Mb</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Where did you find us? <span class="text-danger">*</span></label>
+                                            <select name="source" data-placeholder="Choose an option..." class="select-simple required">
+                                                <option></option>
+                                                <option value="monster">Monster.com</option>
+                                                <option value="linkedin">LinkedIn</option>
+                                                <option value="google">Google</option>
+                                                <option value="adwords">Google AdWords</option>
+                                                <option value="other">Other source</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Availability: <span class="text-danger">*</span></label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="availability" class="styled required">
+                                                    Immediately
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="availability" class="styled">
+                                                    1 - 2 weeks
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="availability" class="styled">
+                                                    3 - 4 weeks
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="availability" class="styled">
+                                                    More than 1 month
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Additional information:</label>
+                                            <textarea name="additional-info" rows="5" cols="5" placeholder="If you want to add any info, do it here." class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- /wizard with validation -->
+
+                </div>
+            </div>
+            <!-- /full width modal -->
+
+        </div>
+        <!-- /content area -->
+
+    </div>
+    <!-- /main content -->
+    {% endblock content %}

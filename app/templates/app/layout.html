@@ -276,7 +276,7 @@
             	<!-- Main sidebar -->
 			<div class="sidebar sidebar-main">
 				<div class="sidebar-content">
-                    <!-- User menu -->
+                    <!-- User menu
 					<div class="sidebar-user">
 						<div class="category-content">
 							<div class="media">
@@ -298,7 +298,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- /user menu -->
+                       user menu -->
 					<!-- Main navigation -->
 					<div class="sidebar-category sidebar-category-visible">
 						<div class="category-content no-padding">
@@ -321,6 +321,8 @@
 				</div>
 			</div>
 			<!-- /main sidebar -->
+    {% block secondary %}
+    {% endblock %}
     {% block content %}
     {% endblock %}
         <hr/>

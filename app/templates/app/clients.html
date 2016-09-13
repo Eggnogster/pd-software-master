@@ -22,24 +22,15 @@
 {% block content %}
 			<!-- Main content -->
 			<div class="content-wrapper">
-
 				<!-- Page header -->
 				<div class="page-header">
 					<div class="page-header-content">
 						<div class="page-title">
 							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Clients</span></h4>
 						</div>
-
-						<div class="heading-elements">
-							<div class="heading-btn-group">
-
-							</div>
-						</div>
 					</div>
 				</div>
 				<!-- /page header -->
-
-
 				<!-- Content area -->
 				<div class="content">
 
@@ -47,20 +38,32 @@
 					<div class="panel panel-flat">
 						<div class="panel-heading">
 							<h5 class="panel-title">Client List</h5>
-                           
-                            <div class="heading-elements-filters">
-                                <form action="#" class="form-horizontal">
-                                    <div class="form-group">
-                                        <label>Default select</label>
+                            <div class="heading-elements-container">
+                                <div class="heading-elements-filters">
+                                    <div class="heading-elements-label">
+                                        Type
+                                    </div>
+                                    <div class="heading-elements-filter-container">
                                         <select class="selectbox-bootstrap btn-default">
-                                            <option value="AK">Alaska</option>
-                                            <option value="HI">Hawaii</option>
-                                            <option value="CA">California</option>
-                                            <option value="NV">Nevada</option>
+                                            <option value="Client">Client</option>
+                                            <option value="Lead">Lead</option>
+                                            <option value="All">All</option>
                                         </select>
-                                    </div>   
-                                </form>
-                            </div>
+                                    </div>
+                                </div>
+                                <div class="heading-elements-filters">
+                                    <div class="heading-elements-label">
+                                        Status
+                                    </div>
+                                    <div class="heading-elements-filter-container">
+                                        <select class="selectbox-bootstrap btn-default">
+                                            <option value="Active">Active</option>
+                                            <option value="Deceased">Deceased</option>
+                                            <option value="Inactive">Inactive</option>
+                                            <option value="All">All</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="heading-elements-search">
                                     <form action="#" class="main-search">
                                         <div class="input-group content-group">
@@ -80,6 +83,7 @@
                                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_full"><i class="icon-add position-left"></i> Add Client</button>
                                 </div>
                             </div>
+                        </div>
                             <div class="panel-body">
                             </div>
 						<div class="table-responsive">

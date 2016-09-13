@@ -97,12 +97,155 @@ def manageoffice(request):
         }
     )
 
-def about(request):
+def staff(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/staff.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def offices(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/offices.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def payrollsetup(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/payroll-setup.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def referralmanager(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/referral-manager.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def holidaysetup(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/holiday-setup.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def insurances(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/insurances.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def billingsetup(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/billing-setup.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def servicetypes(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/service-types.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def medications(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/medications.html',
+        {
+            'title':'Manage Office Staff',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def diagnosis(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/about.html',
+        'app/diagnosis.html',
+        {
+            'title':'About',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
+def taskcodes(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/task-codes.html',
+        {
+            'title':'About',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
+def typesofcare(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/types-of-care.html',
         {
             'title':'About',
             'message':'Your application description page.',
