@@ -4865,10 +4865,10 @@ ul.dropdown-menu .dropdown-content-heading:first-child {
 .label-striped {
   background-color: #f5f5f5;
   color: #333333;
-  width:60px;
   border-left-width: 2px;
   padding: 5px 10px;
 }
+
 .label-striped.label-striped-right {
   border-left-width: 1px;
   border-right-width: 2px;
@@ -6323,4 +6323,13 @@ h6.panel-title,
 .popover[class*=bg-].left > .arrow:after,
 .popover[class*=border-].left > .arrow:after {
   border-left-color: inherit;
+}
+
+/* Added by Erik */
+.label-caregiver {
+      width:100px;
+}
+
+.label-client {
+      width:60px;
 }
