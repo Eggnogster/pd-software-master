@@ -4,3 +4,10 @@ staticfiles
 web.debug.config
 pk.ppk
 virtual
+bin/Microsoft.PythonTools.WebRole.dll
+obj/Debug/privateduty.pyproj.FileListAbsolute.txt
+obj/Debug/web.debug.config
+obj/Debug/web.config
+web.config
+web.debug.config
+web.debug.config
