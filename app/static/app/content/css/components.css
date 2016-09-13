@@ -4877,7 +4877,6 @@ legend.alpaca-container-label {
 * ---------------------------------------------------------------------------- */
 .wizard {
   width: 100%;
-  overflow: hidden;
 }
 .wizard > .steps .current-info,
 .wizard > .content > .title {
@@ -4885,7 +4884,7 @@ legend.alpaca-container-label {
   left: -99999px;
 }
 .wizard > .content {
-  overflow: hidden;
+
   position: relative;
   width: auto;
   padding: 0;

@@ -152,59 +152,10 @@ $(function() {
     // Dynamic options
     //
 
-    // Add options dynamically
-    $(".selectbox-dynamic-options").selectBoxIt({
-        autoWidth: false
-    });
-
-    // Appends a drop down option to your drop down
-    $(".selectbox-dynamic-options").data("selectBox-selectBoxIt").add({
-        value: "This is a new option",
-        text: "This is a new option"
-    });
-
 
     //
     // Remove first option dynamically
     //
-
-    // Initialize
-    $(".selectbox-removing-option").selectBoxIt({
-        autoWidth: false
-    });
-
-    // Removes the first drop down option from the list
-    $(".selectbox-removing-option").data("selectBox-selectBoxIt").remove(0);
-
-
-    //
-    // Remove multiple options dynamically
-    //
-
-    // Initialize
-    $(".selectbox-removing-options").selectBoxIt({
-        autoWidth: false
-    });
-
-    // Removes the first and second drop down options from the list
-    $(".selectbox-removing-options").data("selectBox-selectBoxIt").remove([0,1]);
-
-
-    //
-    // Remove all options dynamically
-    //
-
-    // Initialize
-    $(".selectbox-remove-all").selectBoxIt({
-        autoWidth: false
-    });
-
-    // Removes all of the drop down options from the list
-    $('#remove-all').on('click', function() {
-        $(".selectbox-remove-all").data("selectBox-selectBoxIt").remove();
-    })
-
-
 
     // Other additions
     // ------------------------------
