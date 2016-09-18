@@ -6337,3 +6337,6 @@ h6.panel-title,
 .label-task-code {
       width:100px;
 }
+.checkbox-buffer {
+    padding: 7px 0 7px 0;
+}
