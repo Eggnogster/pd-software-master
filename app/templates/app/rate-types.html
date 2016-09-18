@@ -7,7 +7,7 @@
     <div class="page-header">
         <div class="page-header-content">
             <div class="page-title">
-                <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office > Diagnosis</span></h4>
+                <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office > Rate Types</span></h4>
             </div>
 
             <div class="heading-elements">
@@ -20,10 +20,11 @@
     <!-- /page header -->
     <!-- Content area -->
     <div class="content">
+
         <!-- Basic table -->
         <div class="panel panel-flat">
             <div class="panel-heading">
-                <h5 class="panel-title">Diagnosis Codes</h5>
+                <h5 class="panel-title">Rate Types List</h5>
                 <div class="heading-elements-container">
                     <div class="heading-elements-filters">
                         <div class="heading-elements-label">
@@ -32,8 +33,21 @@
                         <div class="heading-elements-filter-container">
                             <select class="selectbox-bootstrap btn-default">
                                 <option value="All">All</option>
-                                <option value="ICD10 Code">ICD10 Code</option>
-                                <option value="Custom Code">Custom Code</option>
+                                <option value="Billed + Paid">Billed + Paid</option>
+                                <option value="Client Only">Client Only</option>
+                                <option value="Caregiver Only">Caregiver Only</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="heading-elements-filters">
+                        <div class="heading-elements-label">
+                            Code State
+                        </div>
+                        <div class="heading-elements-filter-container">
+                            <select class="selectbox-bootstrap btn-default">
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                                <option value="All">All</option>
                             </select>
                         </div>
                     </div>
@@ -53,27 +67,29 @@
                         </form>
                     </div>
                     <div class="heading-elements">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_form_horizontal"><i class="icon-add position-left"></i> Add Diagnosis Code</button>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_form_horizontal"><i class="icon-add position-left"></i> Add Rate Type</button>
+                    </div>
                     </div>
                 </div>
-            </div>
             <div class="panel-body">
             </div>
             <div class="table-responsive">
                 <table class="table table-sm table-bordered table-striped table-hover">
                     <thead>
                         <tr class="border-solid">
-                            <th>Code</th>
+                            <th>Rate Code</th>
                             <th>Description</th>
-                            <th>Code Type</th>
+                            <th>Rate Code Type</th>
+                            <th>Code State</th>
                             <th style="width:100px;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>98</td>
-                            <td>Neoplasms</td>
-                            <td><span class="label label-primary label-striped label-task-code">ICD10 Code</span></td>
+                            <td>123</td>
+                            <td>CNA Hourly</td>
+                            <td>Client Billed + Caregiver Paid</td>
+                            <td>Active</td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>
@@ -82,9 +98,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>98</td>
-                            <td>Diseases of the genitourinary system</td>
-                            <td><span class="label label-warning label-striped label-task-code">Custom Code</span></td>
+                            <td>123</td>
+                            <td>CNA Hourly</td>
+                            <td>Client Billed + Caregiver Paid</td>
+                            <td>Active</td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>
@@ -93,9 +110,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>98</td>
-                            <td>Diseases of the digestive system</td>
-                            <td><span class="label label-warning label-striped label-task-code">Custom Code</span></td>
+                            <td>123</td>
+                            <td>CNA Hourly</td>
+                            <td>Client Billed + Caregiver Paid</td>
+                            <td>Active</td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>
@@ -104,9 +122,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>98</td>
-                            <td>Diseases of the respiratory system</td>
-                            <td><span class="label label-primary label-striped label-task-code">ICD10 Code</span></td>
+                            <td>123</td>
+                            <td>CNA Hourly</td>
+                            <td>Client Billed + Caregiver Paid</td>
+                            <td>Active</td>
                             <td>
                                 <ul class="icons-list">
                                     <li><a href="#"><i class="icon-pencil7"></i></a></li>
@@ -125,33 +144,60 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h5 class="modal-title">Add Diagnosis Code</h5>
+                        <h5 class="modal-title">Add Medication</h5>
                     </div>
                     <form action="#" class="form-horizontal">
                         <div class="modal-body">
                             <div class="form-group">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Code</label>
-                                        <input type="text" placeholder="C00-D49" class="form-control">
+                                        <label>Rate Code</label>
+                                        <input type="text" placeholder="123" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Code Description</label>
-                                        <input type="text" placeholder="Neoplasms" class="form-control">
+                                        <label>Description</label>
+                                        <input type="text" placeholder="CNA Hourly" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Code Type</label>
-                                        <select class="selectbox-bootstrap btn-default">
-                                            <option value="ICD10 Code">ICD10 Code</option>
-                                            <option value="Custom Code">Custom Code</option>
+                                        <label>Rate Code Type</label>
+                                        <select class="selectbox-bootstrap btn-default" id="type">
+                                            <option value="Client Billed + Caregiver Paid">Client Billed + Caregiver Paid</option>
+                                            <option value="Client Only">Client Only</option>
+                                            <option value="Caregiver Only">Caregiver Only</option>
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-md-3" id="paid_unpaid">
+                                    <label>Paid or Unpaid</label>
+                                    <div class="form-group">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="paid-unpaid" class="styled" checked="checked">
+                                            Paid
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="paid-unpaid" class="styled">
+                                            Unpaid
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" id="billed_unbilled">
+                                    <label>Billed or Unbilled</label>
+                                    <div class="form-group">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="billed-unbilled" class="styled" checked="checked">
+                                            Billed
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="billed-unbilled" class="styled">
+                                            Unbilled
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>                           
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-info  btn-loading" data-loading-text="<i class='icon-spinner4 spinner'></i>"><i class="icon-spinner4 position-left"></i> Save</button>

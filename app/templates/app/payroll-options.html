@@ -1,0 +1,179 @@
+{% extends "app/manage-office.html" %} 
+{% block content %}
+			<!-- Main content -->
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="page-title">
+                <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Manage Office > Payroll Options</span></h4>
+            </div>
+
+            <div class="heading-elements">
+                <div class="heading-btn-group">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+    <!-- Content area -->
+    <div class="content">
+        <!-- Row label (horizontal form) -->
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title">Payroll Options</h6>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" action="#">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Payroll Cycle</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="Weekly">Weekly</option>
+                                        <option value="Bi-Weekly">Bi-Weekly</option>
+                                        <option value="Monthly">Monthly</option>
+                                        <option value="Semi-Monthly">Semi-Monthly</option>
+                                        <option value="Quarterly">Quarterly</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Overtime Rate Factor</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="Regular">Regular</option>
+                                        <option value="Double">Double</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Max Travel Miles</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="2000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Mileage Rate ($)</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="0.58">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Hourly Travel Rate ($)</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Pay Hours</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default" id="pay_select">
+                                        <option value="Actual">Actual</option>
+                                        <option value="Rounded">Rounded</option>
+                                        <option value="Scheduled">Scheduled</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="pay_hours">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Pay Rounded Hours At</label>
+                                <div class="col-md-9">
+                                    <select class="selectbox-bootstrap btn-default">
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-lg-6 control-label">Pay Holiday Rate</label>
+                                <div class="col-md-6">
+                                    <div class="checkbox-buffer">
+                                        <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-lg-6 control-label">Pay Mileage</label>
+                                <div class="col-md-6">
+                                    <div class="checkbox-buffer">
+                                        <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-lg-6 control-label">Pay Overtime</label>
+                                <div class="col-md-6">
+                                    <div class="checkbox-buffer">
+                                        <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label class="col-lg-6 control-label">Pay Expenses</label>
+                                <div class="col-md-6">
+                                    <div class="checkbox-buffer">
+                                        <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <label class="col-lg-6 control-label">Pay Errand Mileage</label>
+                                    <div class="col-md-6">
+                                        <div class="checkbox-buffer">
+                                            <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-info  btn-loading" data-loading-text="<i class='icon-spinner4 spinner'></i>"><i class="icon-spinner4 position-left"></i> Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /row label (horizontal form) -->
+
+        </div>
+        <!-- /content area -->
+
+    </div>
+    <!-- /main content -->
+    {% endblock content %}
