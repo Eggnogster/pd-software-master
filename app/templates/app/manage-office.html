@@ -50,13 +50,16 @@
                                         <li><a href="{% url 'manage-office' %}"><i class="fa fa-briefcase"></i> Company Information</a></li>
 							        	<li><a href="{% url 'staff' %}"><i class="fa fa-users"></i> Staff Management</a></li>
 							        	<li><a href="{% url 'offices' %}"><i style="width:14px;" class="fa fa-building"></i> Offices</a></li>
-							        	<li><a href="{% url 'payroll-setup' %}"><i style="width:14px;" class="fa fa-book"></i> Payroll Setup</a></li>
-                                        <li><a href="{% url 'referral-manager' %}"><i class="fa fa-sitemap"></i> Referral Manager</a></li>
+							        	<li><a href="{% url 'rate-types' %}"><i style="width:14px;" class="fa fa-tags"></i> Rate Types</a></li>                                       
                                         <li><a href="{% url 'holiday-setup' %}"><i style="width:14px;" class="fa fa-calendar"></i> Holiday Setup</a></li>
+                                        <li><a href="{% url 'referral-manager' %}"><i class="fa fa-sitemap"></i> Referral Manager</a></li>
+                                        <li class="navigation-header">Payroll</li>
+                                        <li><a href="{% url 'payroll-options' %}"><i class="fa fa-book"></i> Payroll Options</a></li>
+                                        <li><a href="{% url 'payroll-rates' %}"><i style="width:14px;" class="fa fa-money"></i> Payroll Rates</a></li>	
 								        <li class="navigation-header">Billing</li>
-							        	<li><a href="{% url 'insurances' %}"><i class="fa fa-bank"></i> Insurances</a></li>
-                                        <li><a href="{% url 'billing-setup' %}"><i style="width:14px;" class="fa fa-dollar"></i> Billing Setup</a></li>
-							        	<li><a href="{% url 'service-types' %}"><i class="fa fa-tags"></i> Service Types</a></li>							        
+                                        <li><a href="{% url 'billing-options' %}"><i style="width:14px;" class="fa fa-folder-open"></i> Billing Options</a></li>
+							        	<li><a href="{% url 'billing-rates' %}"><i class="fa fa-dollar" style="width:14px;"></i> Billing Rates</a></li>	
+                                        <li><a href="{% url 'insurances' %}"><i class="fa fa-bank"></i> Insurances</a></li>						        
 							        	<li class="navigation-header">Service Plan</li>
 							        	<li><a href="{% url 'medications' %}"><i class="fa fa-medkit"></i> Medications</a></li>
 							        	<li><a href="{% url 'diagnosis' %}"><i style="width:14px;" class="fa fa-stethoscope"></i> Diagnosis</a></li>

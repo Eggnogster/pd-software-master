@@ -110,6 +110,19 @@ def staff(request):
         }
     )
 
+def ratetypes(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/rate-types.html',
+        {
+            'title':'Rate Types',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
 def offices(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
@@ -123,14 +136,27 @@ def offices(request):
         }
     )
 
-def payrollsetup(request):
+def payrolloptions(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/payroll-setup.html',
+        'app/payroll-options.html',
         {
-            'title':'Payroll Setup',
+            'title':'Payroll Options',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def payrollrates(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/payroll-rates.html',
+        {
+            'title':'Payroll Rates',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
@@ -157,6 +183,32 @@ def holidaysetup(request):
         'app/holiday-setup.html',
         {
             'title':'Holiday Setup',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def billingoptions(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/billing-options.html',
+        {
+            'title':'Billing Options',
+            'message':'Your manage office staff.',
+            'year':datetime.now().year,
+        }
+    )
+
+def billingrates(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/billing-rates.html',
+        {
+            'title':'Billing Rates',
             'message':'Your manage office staff.',
             'year':datetime.now().year,
         }
