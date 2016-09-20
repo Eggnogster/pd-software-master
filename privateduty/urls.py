@@ -39,6 +39,7 @@ urlpatterns = [
     url(r'^diagnosis', app.views.diagnosis, name='diagnosis'),
     url(r'^task-codes', app.views.taskcodes, name='task-codes'),
     url(r'^types-of-care', app.views.typesofcare, name='types-of-care'),
+    url(r'^profile', app.views.profile, name='profile'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^login/$',
         django.contrib.auth.views.login,

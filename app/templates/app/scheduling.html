@@ -1,78 +1,86 @@
 {% extends "app/layout.html" %}
 {% block nav-scheduling %}class="active"{% endblock %}
+{% load static from staticfiles %}
+{% block script %}
+	<script type="text/javascript" src="{% static 'app/scripts/js/plugins/ui/fullcalendar/fullcalendar.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'app/scripts/js/pages/extra_fullcalendar.js' %}"></script>
+{% endblock script %}
 {% block content %}
 
-			<!-- Main content -->
+<!-- Main content -->
 			<div class="content-wrapper">
-
 				<!-- Page header -->
-				<div class="page-header page-header-default">
+				<div class="page-header">
 					<div class="page-header-content">
 						<div class="page-title">
 							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Scheduling</span></h4>
 						</div>
-
-						<div class="heading-elements">
-							<div class="heading-btn-group">
-								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
-								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
-								<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Schedule</span></a>
-							</div>
-						</div>
 					</div>
 				</div>
 				<!-- /page header -->
-
-
 				<!-- Content area -->
 				<div class="content">
-					<!-- Basic view -->
+
+					<!-- Event colors -->
 					<div class="panel panel-flat">
 						<div class="panel-heading">
-							<h5 class="panel-title">Basic view</h5>
-							<div class="heading-elements">
-								<ul class="icons-list">
-			                		<li><a data-action="collapse"></a></li>
-			                		<li><a data-action="reload"></a></li>
-			                		<li><a data-action="close"></a></li>
-			                	</ul>
-		                	</div>
-						</div>
+							<h5 class="panel-title">Schedule</h5>
+                            <div class="heading-elements-container">
+                                <div class="heading-elements-filters">
+                                    <div class="heading-elements-label">
+                                        Type
+                                    </div>
+                                    <div class="heading-elements-filter-container">
+                                        <select class="selectbox-bootstrap btn-default">
+                                            <option value="Client">Client</option>
+                                            <option value="Lead">Lead</option>
+                                            <option value="All">All</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="heading-elements-filters">
+                                    <div class="heading-elements-label">
+                                        Status
+                                    </div>
+                                    <div class="heading-elements-filter-container">
+                                        <select class="selectbox-bootstrap btn-default">
+                                            <option value="Active">Active</option>
+                                            <option value="Deceased">Deceased</option>
+                                            <option value="Inactive">Inactive</option>
+                                            <option value="All">All</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="heading-elements-search">
+                                    <form action="#" class="main-search">
+                                        <div class="input-group content-group">
+                                            <div class="has-feedback has-feedback-left">
+                                                <input type="text" class="form-control" placeholder="Search">
+                                                <div class="form-control-feedback">
+                                                    <i class="icon-search4 text-muted text-size-base"></i>
+                                                </div>
+                                            </div>
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-info">Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="heading-elements">
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_full"><i class="icon-add position-left"></i> Add Visit</button>
+                                </div>
+                            </div>
+                        </div>
 						
 						<div class="panel-body">
-							<p class="content-group">FullCalendar is a jQuery plugin that provides a full-sized, drag &amp; drop event calendar like the one below. It uses AJAX to fetch events on-the-fly and is easily configured to use your own feed format. It is visually customizable with a rich API. Example below demonstrates a default view of the calendar with a basic setup: draggable and editable events, and starting date.</p>
-
-							<div class="fullcalendar-basic"></div>
+							
+							<div class="fullcalendar-event-colors"></div>
 						</div>
 					</div>
-					<!-- /basic view -->
-
-
-					<!-- Agenda view -->
-					<div class="panel panel-flat">
-						<div class="panel-heading">
-							<h5 class="panel-title">Agenda view</h5>
-							<div class="heading-elements">
-								<ul class="icons-list">
-			                		<li><a data-action="collapse"></a></li>
-			                		<li><a data-action="reload"></a></li>
-			                		<li><a data-action="close"></a></li>
-			                	</ul>
-		                	</div>
-						</div>
-						
-						<div class="panel-body">
-							<p class="content-group">FullCalendar has a number of different "views", or ways of displaying days and events. The following 5 views are all built in to FullCalendar: <code>month</code>, <code>basicWeek</code>, <code>basicDay</code>, <code>agendaWeek</code>, <code>agendaDay</code>. You can define header buttons to allow the user to switch between them. Also you can set the initial view of the calendar with the defaultView option. The following example demonstrates <code>agenda</code> views.</p>
-
-							<div class="fullcalendar-agenda"></div>
-						</div>
-					</div>
-					<!-- agenda view -->
-
+					<!-- /event colors -->
 				</div>
 				<!-- /content area -->
 
 			</div>
 			<!-- /main content -->
-
 {% endblock %}

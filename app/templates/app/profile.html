@@ -1,0 +1,187 @@
+{% extends "app/layout.html" %}
+{% load static from staticfiles %}
+{% block script %}
+<script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jquery_ui/core.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/selectboxit.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/wizard_steps.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switchery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/switch.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/notifications/bootbox.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/notifications/sweet_alert.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/selects/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/components_modals.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/wizards/steps.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/styling/uniform.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/core/libraries/jasny_bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/forms/validation/validate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/plugins/extensions/cookie.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/form_checkboxes_radios.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/scripts/js/pages/form_selectbox.js' %}"></script>
+{% endblock %}
+{% block content %}
+            <!-- Main content -->
+            <div class="content-wrapper">
+                <!-- Page header -->
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <div class="page-title">
+                            <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">My Profile</span></h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- /page header -->
+                <!-- Content area -->
+                <div class="content">
+                  
+                    <!-- 2 columns form -->
+                    <form class="form-horizontal" action="#">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">My Profile</h5>
+                                <div class="heading-elements-container">
+                                    </div>
+                                </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <legend class="text-semibold"><i class="icon-reading position-left"></i> User Information</legend>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Username</label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" class="form-control" placeholder="donaldduck@gmail.com">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Password</label>
+                                                <div class="col-lg-9">
+                                                    <input type="password" class="form-control" readonly="readonly" value="********">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Access</label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" class="form-control" readonly="readonly" placeholder="Admin">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Your avatar</label>
+                                                <div class="col-lg-9">
+                                                    <div class="media no-margin-top">
+                                                        <div class="media-left">
+                                                            <a href="#"><img src="static/app/content/images/placeholder.jpg" style="width: 58px; height: 58px;" class="img-rounded" alt=""></a>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <input type="file" class="file-styled">
+                                                            <span class="help-block">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Sex</label>
+                                                <div class="col-lg-9">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="gender2" class="styled" checked="checked">
+                                                        Male
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="gender2" class="styled">
+                                                        Female
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <legend class="text-semibold"><i class="glyphicon glyphicon-earphone position-left"></i>Contact Information</legend>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Your Name</label>
+                                                <div class="col-lg-9">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <input type="text" placeholder="First name" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" placeholder="Last name" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Email</label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" placeholder="donaldduck@gmail.com" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Address 1</label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" placeholder="1234 Happy St" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Address 2</label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" placeholder="Apt 123" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Location</label>
+                                                <div class="col-lg-9">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="mb-15">
+                                                                <select data-placeholder="Select your country" class="select">
+                                                                    <option></option>
+                                                                    <option value="1">Canada</option>
+                                                                    <option value="2">USA</option>
+                                                                    <option value="3">Australia</option>
+                                                                    <option value="4">Germany</option>
+                                                                </select>
+                                                            </div>
+                                                            <input type="text" placeholder="Postal code" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="mb-15">
+                                                                <select data-placeholder="Select your state" class="select">
+                                                                    <option></option>
+                                                                    <option value="1">Texas</option>
+                                                                    <option value="2">USA</option>
+                                                                    <option value="3">Australia</option>
+                                                                    <option value="4">Germany</option>
+                                                                </select>
+                                                            </div>
+                                                            <input type="text" placeholder="City" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Primary Phone</label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" placeholder="123-456-7890" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">Other Phone</label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" placeholder="123-456-7890" class="form-control">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <button type="button" class="btn btn-info  btn-loading" data-loading-text="<i class='icon-spinner4 spinner'></i>"><i class="icon-spinner4 position-left"></i> Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /2 columns form -->
+                </div>
+                <!-- /content area -->
+            </div>
+            <!-- /main content -->
+{% endblock %}

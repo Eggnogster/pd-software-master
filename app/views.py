@@ -304,3 +304,17 @@ def typesofcare(request):
             'year':datetime.now().year,
         }
     )
+
+def profile(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/profile.html',
+        {
+            'title':'Profile',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
