@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <div class="col-md-6">
                             <div class="row">
-                                <label class="col-lg-3 control-label">Payroll Cycle</label>
+                                <label class="col-lg-3 control-label">Bill Cycle</label>
                                 <div class="col-md-9">
                                     <select class="selectbox-bootstrap btn-default">
                                         <option value="Weekly">Weekly</option>
@@ -44,11 +44,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="row">
-                                <label class="col-lg-3 control-label">Overtime Rate Factor</label>
+                                <label class="col-lg-3 control-label">Invoice Terms</label>
                                 <div class="col-md-9">
                                     <select class="selectbox-bootstrap btn-default">
-                                        <option value="Regular">Regular</option>
-                                        <option value="Double">Double</option>
+                                        <option value="Upon Receipt">Upon Receipt</option>
+                                        <option value="Net 10">Net 10</option>
+                                        <option value="Net 10">Net 10</option>
+                                        <option value="Net 10">Net 10</option>
                                     </select>
                                 </div>
                             </div>
@@ -83,7 +85,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="row">
-                                <label class="col-lg-3 control-label">Pay Hours</label>
+                                <label class="col-lg-3 control-label">Bill Hours</label>
                                 <div class="col-md-9">
                                     <select class="selectbox-bootstrap btn-default" id="pay_select">
                                         <option value="Actual">Actual</option>
@@ -94,10 +96,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group" id="pay_hours">
+                    <div class="form-group">
                         <div class="col-md-6">
                             <div class="row">
-                                <label class="col-lg-3 control-label">Pay Rounded Hours At</label>
+                                <label class="col-lg-3 control-label">Invoice Instructions</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="Please pay upon receipt.  Thank you!">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="pay_hours">
+                            <div class="row">
+                                <label class="col-lg-3 control-label">Bill Rounded Hours At</label>
                                 <div class="col-md-9">
                                     <select class="selectbox-bootstrap btn-default">
                                         <option value="5">5</option>
@@ -112,7 +122,7 @@
                     <div class="form-group">
                         <div class="col-md-3">
                             <div class="row">
-                                <label class="col-lg-6 control-label">Pay Holiday Rate</label>
+                                <label class="col-lg-6 control-label">Bill Holiday Rate</label>
                                 <div class="col-md-6">
                                     <div class="checkbox-buffer">
                                         <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
@@ -122,7 +132,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="row">
-                                <label class="col-lg-6 control-label">Pay Mileage</label>
+                                <label class="col-lg-6 control-label">Bill Mileage</label>
                                 <div class="col-md-6">
                                     <div class="checkbox-buffer">
                                         <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
@@ -132,7 +142,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="row">
-                                <label class="col-lg-6 control-label">Pay Overtime</label>
+                                <label class="col-lg-6 control-label">Travel Time</label>
                                 <div class="col-md-6">
                                     <div class="checkbox-buffer">
                                         <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
@@ -142,7 +152,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="row">
-                                <label class="col-lg-6 control-label">Pay Expenses</label>
+                                <label class="col-lg-6 control-label">Bill Expenses</label>
                                 <div class="col-md-6">
                                     <div class="checkbox-buffer">
                                         <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">
@@ -154,7 +164,7 @@
                     <div class="form-group">
                         <div class="col-md-3">
                             <div class="row">
-                                <label class="col-lg-6 control-label">Pay Errand Mileage</label>
+                                <label class="col-lg-6 control-label">Bill Errand Mileage</label>
                                 <div class="col-md-6">
                                     <div class="checkbox-buffer">
                                         <input type="checkbox" name="checkbox-inline checkbox-right" class="styled" checked="checked">

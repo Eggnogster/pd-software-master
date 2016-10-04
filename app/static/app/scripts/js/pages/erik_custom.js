@@ -25,4 +25,28 @@ $(function () {
             $('#pay_hours').hide();
         }
     });
+
+    $('#co_billing').hide();
+    $('#insurance').hide();
+    $('#bill_method').change(function () {
+        if ($('#bill_method').val() == '1') {
+            $('#co_billing').hide();
+            $('#insurance').hide();
+            $('#self_pay').show();
+        }
+        else if ($('#bill_method').val() == '2') {
+            $('#self_pay').hide();
+            $('#insurance').hide();
+            $('#co_billing').show();
+        }
+        else if ($('#bill_method').val() == '3') {
+            $('#self_pay').hide();
+            $('#co_billing').hide();
+            $('#insurance').show();
+        }
+        else {
+            $('#co_billing').hide();
+            $('#insurance').hide();
+        }
+    });
 });
